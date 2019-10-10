@@ -4,8 +4,12 @@ body{
 
 h1 {
   color: #454545;
-  font-size: 3em;
+  font-size: 2em;
 }
-ul{
+.section {
 	background-color: steelblue;
+	width: 30%;
+	padding: 20px;
+	margin: 5px;
 }
+
