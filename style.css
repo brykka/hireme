@@ -1,7 +1,11 @@
 body{
-	background-color: red;
+	background-color: #f1fffa;
 }
 
 h1 {
-  color: blue;
+  color: #454545;
+  font-size: 3em;
+}
+ul{
+	background-color: steelblue;
 }
