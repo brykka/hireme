@@ -1,1 +1,1 @@
-var hello = alert("linked to js file, congrats");
+var hello = alert("click on each anwers to get the correct answer");
