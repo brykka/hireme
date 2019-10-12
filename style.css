@@ -1,7 +1,15 @@
 body{
-	background-color: red;
+	background-color: #f1fffa;
 }
 
 h1 {
-  color: green;
+  color: #454545;
+  font-size: 2em;
 }
+.section {
+	background-color: steelblue;
+	width: 30%;
+	padding: 20px;
+	margin: 5px;
+}
+

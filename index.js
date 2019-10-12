@@ -1,0 +1,1 @@
+var hello = alert("linked to js file, congrats");
