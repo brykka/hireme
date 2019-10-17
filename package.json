@@ -1,0 +1,23 @@
+{
+  "name": "hireme",
+  "version": "1.0.0",
+  "description": "jkhlkjhkljh",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brykka/hireme.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brykka/hireme/issues"
+  },
+  "homepage": "https://github.com/brykka/hireme#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pug": "^2.0.4"
+  }
+}
