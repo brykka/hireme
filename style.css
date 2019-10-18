@@ -1,7 +1,8 @@
 @import url('components/language.css');
 
 body {
-  background-color: #f1fffa;
+  background-color: yellow;
+  margin: auto 0;
 }
 .header{
   margin: 50px 25%;
@@ -28,4 +29,12 @@ a {
   color: black;
 }
 
+.quizzes {
+  background-color: #f1fffa;
+  height: 65vh;
+}
 
+.bios {
+  background-color: #bbc0c3;
+  height: 50vh;
+}
