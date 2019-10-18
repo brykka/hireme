@@ -66,8 +66,8 @@ app.get('/indextest', function (req, res) { // req = incoming request, res = out
     listOfQuizzes: quizzes,
     body: story,
     person2: {name: person2, bio: "okokok", contact: "linkdin", avatar: person1Image },
-    person1: {name: person1, bio: 'yeesyyesys', contact: "gmail",avatar: person2Image },
-    person3: {name: person3, bio: "blablabla", contact: "twitter", avatar: person3Image }
+    person1: {name: person1, bio: 'yeesyyesys', contact: "gmail",avatar: person1Image },
+    person3: {name: person3, bio: "blablabla", contact: "twitter", avatar: person1Image }
   })
 })
 
