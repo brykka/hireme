@@ -10,9 +10,7 @@ html
       h2 Which test do you want to take?
 
     row
-      div.langCard
-        div.img
-          div.langCardInfo
-            each val in listOfQuizzes
-              a(href='quiz/' + val) #{val}
+      each val in listOfQuizzes
+        div.langCard
+          a(href='quiz/' + val) #{val}
 
