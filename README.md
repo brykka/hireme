@@ -12,7 +12,9 @@ Then, will use database to make it dynamic
 
 ## introduction
 [brykka](https://github.com/brykka) - brykka intro
+
 [miimii](https://github.com/Miimii1010) - miimii intro
+
 [yijen](https://github.com/theyij) - brykka intro
 
 We met in a meetup in Tokyo
