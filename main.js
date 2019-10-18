@@ -5,17 +5,17 @@ var app = express();
 // it, absolute and relative. If we are using absolute values it might looks
 // something like:
 //   /Users/myname/git-projects/hireme/img/
-// 
+//
 // Other people might set their computers up a little differently though. For
 // them, they may be saving hireme in a different place:
 //   /home/yourname/coding-stuff/hireme/img/
-// 
+//
 // These are examples of absolute paths. What we are doing here is importing a
 // library called 'path' that allows us to use relative places. For example
 //   ./img
 //   ./components
 //   ./css
-// 
+//
 // Using a . at the begining of a relative path means 'the directory that this
 // file (main.js) is saved to.' It doesn't matter where the other people you are
 // working with have saved it. The program will figure out the details on its
@@ -63,9 +63,9 @@ app.get('/indextest', function (req, res) { // req = incoming request, res = out
   res.render('index', { // res = outgoing response
     listOfQuizzes: quizzes,
     body: story,
-    person2: {name: person2, bio: "okokok", contact: "linkdin"},
-    person1: {name: person1, bio: 'yeesyyesys', contact: "gmail"},
-    person3: {name: person3, bio: "blablabla", contact: "twitter"}
+    person2: {name: person2, bio: "okokok", contact: "linkdin", avatar: 'https://github.com/brykka.png?size=200'},
+    person1: {name: person1, bio: 'yeesyyesys', contact: "gmail",avatar: 'https://github.com/brykka.png?size=200'},
+    person3: {name: person3, bio: "blablabla", contact: "twitter", avatar: 'https://github.com/brykka.png?size=200'}
   })
 })
 
