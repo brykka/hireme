@@ -1,0 +1,32 @@
+.resultP div{
+	margin: 5% 20%;
+	padding: 5% 2%;
+	border: 1px solid steelblue;
+	text-align: center;
+	
+}
+.resultP h1 {
+	color: #454545;
+	font-size: 2em;
+	margin: 10px 5%;
+	background-color: steelblue;
+
+}
+.resultP p{
+	margin: 20px 5%;
+	background-color: pink;
+	padding: 5px;
+	font-size: 2em;
+}
+.resultP p span{
+	color: red;
+	font-weight: bold;
+}
+
+.tryAgain div{
+	margin: 0 30% 100px 30%;
+	padding: 15px;
+	background-color: orange;
+	text-align: center;
+	border: 1px solid #454545;
+}

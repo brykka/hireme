@@ -1,0 +1,10 @@
+.result div{
+	margin: 5% 20%;
+	text-align: center;
+	padding: 10px;
+	background-color: steelblue;
+}
+.result h1 {
+	color: #FFF;
+	font-size: 2em;
+}
