@@ -6,3 +6,9 @@ h2 {
 p {
   color: blue;
 }
+
+a {
+  padding: 50px;
+  text-decoration: none;
+  color: black;
+}

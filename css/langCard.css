@@ -1,0 +1,10 @@
+.langCard {
+  background-color: white;
+  padding: 40px;
+  margin: 20px;
+}
+
+.langCard a {
+  font-size: 60px;
+  font-family: 'Roboto', sans-serif;
+}
