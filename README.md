@@ -1,12 +1,16 @@
 # hireme
-
-making a quiz website to practise front end design
 http://bit.ly/hireMe_MBY 
 
-=======
-A small front end quiz site to practise front end design!
+# introduction
+brykka, miimii1010 & theyij met in a meetup in Tokyo. 
+After that, we decided to form a study group together, currently working on a quiz site to practise front-end design. 
 
-////// LOG //////  
+# goal
+Quiz site will have 3 question sections, for HTML, CSS and Javascript.
+First stage will have a hardcode structure. Includes landing page, question page, and result. 
+Then, will use database to make it dynamic.
+
+# weekly LOG
 - 10/18 
 Make this quiz application work with only HTML, CSS & Javascript today.
 and will make it dynamic in the future.
