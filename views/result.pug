@@ -1,16 +1,12 @@
 html
   head
     style
-      include ../style.css
+      include ../css/result.css
   body
-    h1 Here is your result
-    p Let's see how you did on the quiz
-    p Let's how you did on the quiz
+    div.result
+      div
+        h1 Here is your HTML/CSS/Js quiz result
 
-
-
-
-
-// link back to homepage/indextest
-a(href='/indextest') Back to quizzes
-
+    include resultCard.pug
+    // link back to homepage/indextest
+    include againButton.pug
