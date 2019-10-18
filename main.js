@@ -5,8 +5,8 @@ var app = express();
 // var jsPic = ;
 
 
-var img1 = document.createElement("img");
-img1.src = "http://path/to/image";
+// var img1 = document.createElement("img");
+// img1.src = "http://path/to/image";
 
 // views is where we store the templates
 app.set('views', process.cwd() + '/views')
