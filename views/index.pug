@@ -13,4 +13,12 @@ html
       each val in listOfQuizzes
         div.langCard
           a(href='quiz/' + val) #{val}
+            // We indent this so that the image is a link
+            img(src='/img/' + val + '.png')
 
+    row
+      h2 #{body}
+      ul
+        li= person1.name + ": " + person1.bio + ' ' + person1.contact
+        li= person2.name + ": " + person2.bio + ' ' + person2.contact
+        li= person3.name + ": " + person3.bio + ' ' + person3.contact
