@@ -5,9 +5,6 @@ var app = express();
 // var jsPic = ;
 
 
-// var img1 = document.createElement("img");
-// img1.src = "http://path/to/image";
-
 // views is where we store the templates
 app.set('views', process.cwd() + '/views')
 // view engine is the decription for software, renders html
@@ -15,9 +12,17 @@ app.set('view engine', 'pug')
 
 
 app.get('/indextest', function (req, res) { // req = incoming request, res = outgoing response
-  var quizzes = [ html, cs, js]
+  var quizzes = ['HTML', 'CSS', 'JS']
+  const story = 'this is how we met and this is what we are working on blah blabaldada a a haonlaksncla talk about us blah'
+  const person1 = "yijen"
+  const person2 = "mimi"
+  const person3 = "bryenne"
   res.render('index', { // res = outgoing response
-    listOfQuizzes: quizzes
+    listOfQuizzes: quizzes,
+    body: story,
+    person2: {name: person2, bio: "okokok", contact: "linkdin"},
+    person1: {name: person1, bio: 'yeesyyesys', contact: "gmail"},
+    person3: {name: person3, bio: "blablabla", contact: "twitter"}
   })
 })
 
