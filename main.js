@@ -15,20 +15,29 @@ app.get('/indextest', function (req, res) { // req = incoming request, res = out
 })
 
 app.get('/quiz/html', function (req, res) { // req = incoming request, res = outgoing response
+  var quizzes = ['HTML', 'CSS', 'JS']
   res.render('html', { // res = outgoing response
     listOfQuizzes: quizzes
   })
 })
 
 app.get('/quiz/css', function (req, res) { // req = incoming request, res = outgoing response
+  var quizzes = ['HTML', 'CSS', 'JS']
   res.render('css', { // res = outgoing response
     listOfQuizzes: quizzes
   })
 })
 
 app.get('/quiz/js', function (req, res) { // req = incoming request, res = outgoing response
+  var quizzes = ['HTML', 'CSS', 'JS']
   res.render('js', { // res = outgoing response
     listOfQuizzes: quizzes
+  })
+})
+
+app.get('/result', function (req, res) { // req = incoming request, res = outgoing response
+  const story = 'this is the fake result page, lol'
+  res.render('result', { // res = outgoing response
   })
 })
 
@@ -45,6 +54,9 @@ app.get('/about', function (req, res) { // req = incoming request, res = outgoin
     person3: {name: person3, bio: "blablabla", contact: "twitter"}
   })
 })
+
+
+
 
 
 
