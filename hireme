@@ -28,6 +28,4 @@ h2 {
 
 a {
   padding: 50px;
-  text-decoration: none;
-  color: black;
 }
