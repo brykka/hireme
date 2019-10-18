@@ -1,3 +1,4 @@
 # hireme
 
-making a quiz website to practise front end design
+A small front end quiz site to practise front end design!
+
