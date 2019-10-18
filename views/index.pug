@@ -2,15 +2,17 @@ html
   head
     style
       include ../style.css
+      include ../css/languages.css
+      include ../css/langCard.css
     title Hire me test
   body
     row
       h2 Which test do you want to take?
-    row
-      each val in listOfQuizzes
-        a(href='quiz/' + val) #{val}
-          img(src='../img/css3.png')
-    row
-      p ok pls work
 
+    row
+      div.langCard
+        div.img
+          div.langCardInfo
+            each val in listOfQuizzes
+              a(href='quiz/' + val) #{val}
 
