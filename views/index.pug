@@ -1,7 +1,11 @@
 html
   head
+    style
+      include ../style.css
     title Hire me test
   body
-    h2 Which test do you want to take?
+    row
+      h2 Which test do you want to take?
+    row
       each val in listOfQuizzes
         a(href='quiz/' + val) #{val}
