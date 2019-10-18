@@ -15,18 +15,21 @@ app.get('/indextest', function (req, res) { // req = incoming request, res = out
 })
 
 app.get('/quiz/html', function (req, res) { // req = incoming request, res = outgoing response
+  var quizzes = ['HTML', 'CSS', 'JS']
   res.render('html', { // res = outgoing response
     listOfQuizzes: quizzes
   })
 })
 
 app.get('/quiz/css', function (req, res) { // req = incoming request, res = outgoing response
+  var quizzes = ['HTML', 'CSS', 'JS']
   res.render('css', { // res = outgoing response
     listOfQuizzes: quizzes
   })
 })
 
 app.get('/quiz/js', function (req, res) { // req = incoming request, res = outgoing response
+  var quizzes = ['HTML', 'CSS', 'JS']
   res.render('js', { // res = outgoing response
     listOfQuizzes: quizzes
   })
