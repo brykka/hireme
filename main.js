@@ -9,6 +9,7 @@ app.set('view engine', 'pug')
 
 app.get('/indextest', function (req, res) { // req = incoming request, res = outgoing response
   var quizzes = ['HTML', 'CSS', 'JS']
+
   res.render('index', { // res = outgoing response
     listOfQuizzes: quizzes
   })
