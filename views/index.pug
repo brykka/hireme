@@ -4,6 +4,7 @@ html
       include ../style.css
       include ../css/languages.css
       include ../css/langCard.css
+      include ../css/us.css
     title Hire me test
   body
   div.quizzes
@@ -21,7 +22,7 @@ html
     row
       h2 #{body}
     row
-      ul
-        li= person1.name + ": " + person1.bio + ' ' + person1.contact
-        li= person2.name + ": " + person2.bio + ' ' + person2.contact
-        li= person3.name + ": " + person3.bio + ' ' + person3.contact
+      div.us
+        p= person1.name + ": " + person1.bio + ' ' + person1.contact + ' ' + person1.avatar
+        p= person2.name + ": " + person2.bio + ' ' + person2.contact + ' ' + person2.avatar
+        p= person3.name + ": " + person3.bio + ' ' + person3.contact + ' ' + person3.avatar
