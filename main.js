@@ -1,8 +1,8 @@
 var express = require('express');
 var app = express();
-var htmlPic = ;
-var cssPic = ;
-var jsPic = ;
+// var htmlPic = ;
+// var cssPic = ;
+// var jsPic = ;
 
 
 var img1 = document.createElement("img");
