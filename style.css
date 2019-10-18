@@ -1,3 +1,5 @@
+@import url('components/language.css');
+
 body {
   background-color: #f1fffa;
 }
@@ -8,16 +10,22 @@ h1 {
   color: #454545;
   font-size: 2em;
 }
-
+h2 {
+  text-align: center;
+}
 .section {
   background-color: steelblue;
   padding: 20px;
   margin: 10px 20%;
   color: #fff;
 }
-
 .answers{
   background-color: red;
+}
+a {
+  padding: 50px;
+  text-decoration: none;
+  color: black;
 }
 
 
