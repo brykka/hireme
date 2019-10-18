@@ -35,6 +35,12 @@ app.get('/quiz/js', function (req, res) { // req = incoming request, res = outgo
   })
 })
 
+app.get('/result', function (req, res) { // req = incoming request, res = outgoing response
+  const story = 'this is the fake result page, lol'
+  res.render('result', { // res = outgoing response
+  })
+})
+
 app.get('/about', function (req, res) { // req = incoming request, res = outgoing response
   const story = 'this is how we met and this is what we are working on blah blabaldada a a haonlaksncla talk about us blah'
   const person1 = "yijen"
@@ -48,6 +54,9 @@ app.get('/about', function (req, res) { // req = incoming request, res = outgoin
     person3: {name: person3, bio: "blablabla", contact: "twitter"}
   })
 })
+
+
+
 
 
 

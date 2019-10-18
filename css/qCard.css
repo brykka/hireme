@@ -1,0 +1,21 @@
+.qCardBody div{
+	margin: 50px 20%;
+	padding: 20px;
+	border: 1px solid steelblue;
+	text-align: center;
+	
+}
+.qCardBody h1 {
+	color: #454545;
+	font-size: 2em;
+	margin: 20px 20%;
+	background-color: steelblue;
+
+}
+.qCardBody p{
+	margin: 5px 30%;
+	background-color: pink;
+	text-align: left;
+	padding: 5px;
+
+}
