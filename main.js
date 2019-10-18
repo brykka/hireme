@@ -60,12 +60,14 @@ app.get('/indextest', function (req, res) { // req = incoming request, res = out
   const person1 = "yijen"
   const person2 = "mimi"
   const person3 = "bryenne"
+  const person1Image = 'https://github.com/brykka.png?size=200.src'
+
   res.render('index', { // res = outgoing response
     listOfQuizzes: quizzes,
     body: story,
-    person2: {name: person2, bio: "okokok", contact: "linkdin", avatar: 'https://github.com/brykka.png?size=200'},
-    person1: {name: person1, bio: 'yeesyyesys', contact: "gmail",avatar: 'https://github.com/brykka.png?size=200'},
-    person3: {name: person3, bio: "blablabla", contact: "twitter", avatar: 'https://github.com/brykka.png?size=200'}
+    person2: {name: person2, bio: "okokok", contact: "linkdin", avatar: person1Image },
+    person1: {name: person1, bio: 'yeesyyesys', contact: "gmail",avatar: person2Image },
+    person3: {name: person3, bio: "blablabla", contact: "twitter", avatar: person3Image }
   })
 })
 
