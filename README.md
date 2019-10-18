@@ -1,6 +1,9 @@
 # hireme
 
 making a quiz website to practise front end design
+http://bit.ly/hireMe_MBY 
+
+=======
 A small front end quiz site to practise front end design!
 
 ////// LOG //////  
