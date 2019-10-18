@@ -1,5 +1,12 @@
 var express = require('express');
 var app = express();
+var htmlPic = ;
+var cssPic = ;
+var jsPic = ;
+
+
+var img1 = document.createElement("img");
+img1.src = "http://path/to/image";
 
 // views is where we store the templates
 app.set('views', process.cwd() + '/views')
@@ -8,7 +15,7 @@ app.set('view engine', 'pug')
 
 
 app.get('/indextest', function (req, res) { // req = incoming request, res = outgoing response
-  var quizzes = ['HTML', 'CSS', 'JS']
+  var quizzes = [ html, cs, js]
   res.render('index', { // res = outgoing response
     listOfQuizzes: quizzes
   })
@@ -49,6 +56,11 @@ app.get('/about', function (req, res) { // req = incoming request, res = outgoin
   })
 })
 
+app.get('/result', function (req, res) {
+  // body...
+  res.render('result', {
+  })
+})
 
 
 // app.post('/quiz/html', function (req, res) {
