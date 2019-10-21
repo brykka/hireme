@@ -56,18 +56,21 @@ app.use("/img", express.static(path.join(__dirname, 'img')));
 
 app.get('/indextest', function (req, res) { // req = incoming request, res = outgoing response
   var quizzes = ['HTML', 'CSS', 'JS']
-  const story = 'this is how we met and this is what we are working on blah blabaldada a a haonlaksncla talk about us blah'
-  const person1 = "yijen"
-  const person2 = "mimi"
-  const person3 = "bryenne"
-  const person1Image = 'https://github.com/brykka.png?size=200.src'
+  var story = 'We met at a coding meetup in October and decied to get together to work on this prohect to practice working on front end development in a team.'
+  var person1 = "YIjen"
+  var person2 = "Miimii"
+  var person3 = "Bryenne"
+  var person1Image = 'https://github.com/theyij.png?size=200.src'
+  var person2Image = 'https://github.com/Miimii1010.png?size=200'
+  var person3Image = 'https://github.com/brykka.png?size=200'
+
 
   res.render('index', { // res = outgoing response
     listOfQuizzes: quizzes,
     body: story,
-    person2: {name: person2, bio: "okokok", contact: "linkdin", avatar: person1Image },
-    person1: {name: person1, bio: 'yeesyyesys', contact: "gmail",avatar: person1Image },
-    person3: {name: person3, bio: "blablabla", contact: "twitter", avatar: person1Image }
+    person2: {name: person1, bio: "This is a little bit of info about me. Here is my history, current and future projects. This is what I am intereseted in.", contact: "linkdin", avatar: person1Image },
+    person1: {name: person2, bio: "This is a little bit of info about me. Here is my history, current and future projects. This is what I am intereseted in.", contact: "gmail",avatar: person2Image },
+    person3: {name: person3, bio: "This is a little bit of info about me. Here is my history, current and future projects. This is what I am intereseted in.", contact: "twitter", avatar: person3Image }
   })
 })
 
@@ -92,19 +95,19 @@ app.get('/quiz/js', function (req, res) { // req = incoming request, res = outgo
   })
 })
 
-app.get('/about', function (req, res) { // req = incoming request, res = outgoing response
-  const story = 'this is how we met and this is what we are working on blah blabaldada a a haonlaksncla talk about us blah'
-  const person1 = "yijen"
-  const person2 = "mimi"
-  const person3 = "bryenne"
+// app.get('/about', function (req, res) { // req = incoming request, res = outgoing response
+//   var story = 'why isn\'t this working'
+//   var person1 = "YIjen"
+//   var person2 = "Miimii"
+//   var person3 = "Bryenne"
 
-  res.render('about', { // res = outgoing response
-    body: story,
-    person2: {name: person2, bio: "okokok", contact: "linkdin"},
-    person1: {name: person1, bio: 'yeesyyesys', contact: "gmail"},
-    person3: {name: person3, bio: "blablabla", contact: "twitter"}
-  })
-})
+//   res.render('about', { // res = outgoing response
+//     body: story,
+//     person1: {name: person1, bio: "This is a little bit of info about me. Here is my history, current and future projects. This is what I am intereseted in.", contact: "linkdin"},
+//     person2: {name: person2, bio: 'This is a little bit of info about me. Here is my history, current and future projects. This is what I am intereseted in.', contact: "gmail"},
+//     person3: {name: person3, bio: "This is a little bit of info about me. Here is my history, current and future projects. This is what I am intereseted in.", contact: "twitter"}
+//   })
+// })
 
 app.get('/result', function (req, res) {
   // body...

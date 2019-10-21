@@ -1,0 +1,13 @@
+.bioCard div {
+  background-color: white;
+  padding: 50px;
+  text-align: center;
+  width: 30%;
+}
+
+.bioCard p {
+  color: #555555;
+  font-family: 'Roboto', sans-serif;
+  font-weight: lighter;
+  font-size: 20px;
+}
