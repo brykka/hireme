@@ -5,6 +5,7 @@ html
       include ../css/languages.css
       include ../css/langCard.css
       include ../css/bioCard.css
+
     title Hire me test
   body
   div.quizzes
@@ -21,5 +22,12 @@ html
   div.bios
     h2 #{body}
     row
-      include bioCard.pug
-
+      each val, index in person1
+        div.bioCard
+        p= index + ': ' + val
+      each val, index in person1
+        div.bioCard
+        p= index + ': ' + val
+      each val, index in person1
+        div.bioCard
+        p= index + ': ' + val
