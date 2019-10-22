@@ -20,6 +20,14 @@ html
 
   div.bios
     h2 #{body}
-    row
       include bioCard.pug
+      each val, index in person1
+        .bioCard= val
+      each val, index in person2
+        .bioCard= val
+      each val, index in person3
+        .bioCard= val
+
+
+    // to target the nameand stuff you are going to have to do it the long way h1=person1.name
 

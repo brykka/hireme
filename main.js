@@ -57,8 +57,8 @@ app.use("/img", express.static(path.join(__dirname, 'img')));
 app.get('/indextest', function (req, res) { // req = incoming request, res = outgoing response
   var quizzes = ['HTML', 'CSS', 'JS']
   var story = 'We met at a coding meetup in October and decied to get together to work on this prohect to practice working on front end development in a team.'
-  var person1 = "YIjen"
-  var person2 = "Miimii"
+  var person1 = "IJen"
+  var person2 = "Mimi"
   var person3 = "Bryenne"
   var person1Image = 'https://github.com/theyij.png?size=200.src'
   var person2Image = 'https://github.com/Miimii1010.png?size=200'

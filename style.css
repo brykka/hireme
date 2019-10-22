@@ -1,4 +1,5 @@
 @import url('components/language.css');
+include components/language.css
 
 body {
   background-color: yellow;
