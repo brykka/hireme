@@ -80,7 +80,7 @@ app.get('/indextest', function (req, res) { // req = incoming request, res = out
 
 app.get('/quiz/html', function (req, res) { // req = incoming request, res = outgoing response
    // SELECT fr database put
-  // var databsinfo = SELECT FROM db
+  var htmlDataInfo = SELECT FROM db
   var quizzes = ['HTML', 'CSS', 'JS']
   res.render('html', { // res = outgoing response
     // this is the sendy part
