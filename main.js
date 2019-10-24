@@ -66,14 +66,14 @@ app.get('/indextest', function (req, res) { // req = incoming request, res = out
   var person3 = 'Bryenne'
   var person1Image = 'https://github.com/theyij.png?size=200.src'
   var person2Image = 'https://github.com/Miimii1010.png?size=200'
-  var person3Image = 'https://github.com/brykka.png?size=200'
+  var person3Image = 'https://avatars1.githubusercontent.com/u/47349194?s=460&v=4'
 
 
   res.render('index', { // res = outgoing response
     listOfQuizzes: quizzes,
     body: story,
-    person1: {name: person1, bio: "This is a little bit of info about me. Here is my history, current and future projects. This is what I am intereseted in.", contact: "linkdin", avatar: person1Image },
-    person2: {name: person2, bio: "This is a little bit of info about me. Here is my history, current and future projects. This is what I am intereseted in.", contact: "gmail",avatar: person2Image },
+    person1: {name: person1, bio: "Currently looking for new challenges and opportunities to contribute in Front-End web-development. ", contact: "linkdin", avatar: person1Image },
+    person2: {name: person2, bio: "This is a little bit of info about me. Here is my history, current and future projects. This is what I am intereseted in.", contact: "gmail", avatar: person2Image },
     person3: {name: person3, bio: "This is a little bit of info about me. Here is my history, current and future projects. This is what I am intereseted in.", contact: "twitter", avatar: person3Image }
   })
 })
