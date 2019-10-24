@@ -20,14 +20,20 @@ html
             img(src='/img/' + val + '.png')
 
   div.bios
+    
     h2 #{body}
+
       include bioCard.pug
-      each val, index in person1
-        .bioCard= val
-      each val, index in person2
-        .bioCard= val
-      each val, index in person3
-        .bioCard= val
+      //- div.personCard
+      //-   //- imgperson1Image
+      //-   h3=person1.name
+      //-   p=person1.bio
+      //- each val, index in person1
+      //-   .bioCard= val
+      //- each val, index in person2
+      //-   .bioCard= val
+      //- each val, index in person3
+      //-   .bioCard= val
 
 
     // to target the nameand stuff you are going to have to do it the long way h1=person1.name

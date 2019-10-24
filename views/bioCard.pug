@@ -2,5 +2,21 @@ html
   head
     style
       include ../css/bioCard.css
+    script
+      include ../main.js
+
   body
     div.bioCard
+      div
+        h3=person1.name
+        p=person1.bio
+        img(src=person1.avatar)
+      div
+        h3=person2.name
+        p=person2.bio
+        img(src=person2.avatar)
+
+      div
+        h3=person3.name
+        p=person3.bio
+        img(src=person3.avatar)
