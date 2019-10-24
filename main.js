@@ -1,5 +1,13 @@
 var express = require('express');
 var app = express();
+var sqlite3 = require('sqlite3').verbose();
+let db = new sqlite3.Database(':memory:', (err) => {
+  if (err) {
+    return console.error(err.message);
+  }
+  console.log('Connected to the in-memory SQlite database.');
+});
+
 
 // When we reference local (on your computer) files there are two ways we can do
 // it, absolute and relative. If we are using absolute values it might looks
