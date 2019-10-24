@@ -89,24 +89,24 @@ app.get('/indextest', function (req, res) { // req = incoming request, res = out
     listOfQuizzes: quizzes,
     body: story,
     person1: {
-    	name: person1, 
-    	bio: "Currently looking for new challenges and opportunities to contribute in Front-End web-development. ", 
+    	name: person1,
+    	bio: "Currently looking for new challenges and opportunities to contribute in Front-End web-development. ",
     	avatar: person1Image,
     	linkedin: "https://www.linkedin.com/in/yangijen/",
     	github:"https://github.com/theyij",
     	website:"https://yijen.netlify.com"
     },
     person2: {
-    	name: person2, 
-    	bio: "This is a little bit of info about me. Here is my history, current and future projects. This is what I am intereseted in.", 
+    	name: person2,
+    	bio: "This is a little bit of info about me. Here is my history, current and future projects. This is what I am intereseted in.",
     	avatar: person2Image,
     	linkedin: "https://www.linkedin.com/",
     	github:"https://github.com/Miimii1010",
     	website:"https://codepen.io/"
     },
     person3: {
-    	name: person3, 
-    	bio: "This is a little bit of info about me. Here is my history, current and future projects. This is what I am intereseted in.", 
+    	name: person3,
+    	bio: "This is a little bit of info about me. Here is my history, current and future projects. This is what I am intereseted in.",
     	avatar: person3Image,
     	linkedin: "https://www.linkedin.com/",
     	github:"https://github.com/brykka",
@@ -117,15 +117,14 @@ app.get('/indextest', function (req, res) { // req = incoming request, res = out
 
 app.get('/quiz/html', function (req, res) { // req = incoming request, res = outgoing response
    // SELECT fr database put
-let htmlDB = `SELECT question FROM html
-           ORDER BY name`;
+let htmlDB = `SELECT question FROM html`;
 
-db.all(sql, [], (err, rows) => {
+db.htmlDB(sqlite3, [], (err, rows) => {
   if (err) {
     throw err;
   }
   rows.forEach((row) => {
-    console.log(row.name);
+    console.log(row.question);
   });
 });  var quizzes = ['HTML', 'CSS', 'JS']
   res.render('html', { // res = outgoing response
