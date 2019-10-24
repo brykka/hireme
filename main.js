@@ -91,20 +91,6 @@ app.get('/quiz/js', function (req, res) { // req = incoming request, res = outgo
   })
 })
 
-// app.get('/about', function (req, res) { // req = incoming request, res = outgoing response
-//   var story = 'why isn\'t this working'
-//   var person1 = "YIjen"
-//   var person2 = "Miimii"
-//   var person3 = "Bryenne"
-
-//   res.render('about', { // res = outgoing response
-//     body: story,
-//     person1: {name: person1, bio: "This is a little bit of info about me. Here is my history, current and future projects. This is what I am intereseted in.", contact: "linkdin"},
-//     person2: {name: person2, bio: 'This is a little bit of info about me. Here is my history, current and future projects. This is what I am intereseted in.', contact: "gmail"},
-//     person3: {name: person3, bio: "This is a little bit of info about me. Here is my history, current and future projects. This is what I am intereseted in.", contact: "twitter"}
-//   })
-// })
-
 app.get('/result', function (req, res) {
   // body...
   res.render('result', {
