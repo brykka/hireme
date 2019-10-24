@@ -1,11 +1,20 @@
 var express = require('express');
 var app = express();
 var sqlite3 = require('sqlite3').verbose();
+
 let db = new sqlite3.Database(':memory:', (err) => {
+  // open the db
   if (err) {
     return console.error(err.message);
   }
   console.log('Connected to the in-memory SQlite database.');
+});
+// close the db
+db.close((err) => {
+  if (err) {
+    return console.error(err.message);
+  }
+  console.log('Close the database connection.');
 });
 
 
@@ -59,7 +68,7 @@ app.use("/img", express.static(path.join(__dirname, 'img')));
 
 app.get('/indextest', function (req, res) { // req = incoming request, res = outgoing response
   var quizzes = ['HTML', 'CSS', 'JS']
-  var story = 'We met at a coding meetup in October and decied to get together to work on this prohect to practice working on front end development in a team.'
+  var story = 'We met at a coding meetup in October and decied to get together to work on this project to practice working on front end development in a team.'
 
   var person1 = 'Ijen'
   var person2 = 'Mimi'
@@ -80,8 +89,17 @@ app.get('/indextest', function (req, res) { // req = incoming request, res = out
 
 app.get('/quiz/html', function (req, res) { // req = incoming request, res = outgoing response
    // SELECT fr database put
-  var htmlDataInfo = SELECT FROM db
-  var quizzes = ['HTML', 'CSS', 'JS']
+let htmlDB = `SELECT question FROM html
+           ORDER BY name`;
+
+db.all(sql, [], (err, rows) => {
+  if (err) {
+    throw err;
+  }
+  rows.forEach((row) => {
+    console.log(row.name);
+  });
+});  var quizzes = ['HTML', 'CSS', 'JS']
   res.render('html', { // res = outgoing response
     // this is the sendy part
     // dbinfo: databsinfo
