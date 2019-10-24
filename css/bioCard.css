@@ -1,14 +1,22 @@
 .bioCard div {
-  border: 5px solid yellow;
+  background-color: steelblue;
   text-align: center;
   float: left;
-  width: 28%; 
-  padding: 1%;
+  width: 30%; 
+  padding: 5px;
+  margin: 5px;
 }
-
 .bioCard p {
-  color: red;
+  color: white;
   font-family: 'Roboto', sans-serif;
   font-weight: lighter;
   font-size: 20px;
+}
+.bioCard div img{
+	width: 90%;
+}
+.bioCard div .icon img{
+	width: 30%;
+	float: left;
+
 }
