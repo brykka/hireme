@@ -24,6 +24,8 @@ After that, we decided to form a study group together
 Currently working on a quiz site to practise front-end design
 
 ## weekly log
+- 10/24
+I - Update landing page layout, link data from main.js to pug file. Feel free to update your personal site & linkedin url. Will work on database before next study session.  
 
 - 10/18 
 
