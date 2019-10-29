@@ -119,14 +119,7 @@ app.get('/quiz/html', function (req, res) { // req = incoming request, res = out
    // SELECT fr database put
 let htmlDB = `SELECT question FROM html`;
 
-db.htmlDB(sqlite3, [], (err, rows) => {
-  if (err) {
-    throw err;
-  }
-  rows.forEach((row) => {
-    console.log(row.question);
-  });
-});  var quizzes = ['HTML', 'CSS', 'JS']
+  var quizzes = ['HTML', 'CSS', 'JS']
   res.render('html', { // res = outgoing response
     // this is the sendy part
     // dbinfo: databsinfo
