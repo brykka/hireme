@@ -2,15 +2,14 @@ var express = require('express');
 var app = express();
 var sqlite3 = require('sqlite3').verbose();
 
-function openDB() {
-  var db = new sqlite3.Database('./hireme.db', (err) => {
-    // open the db
-    if (err) {
-      return console.error(err.message);
-    }
-    console.log('Connected to the in-memory SQlite database.');
-  });
-}
+var db = new sqlite3.Database('./hireme.db', (err) => {
+  // open the db
+  if (err) {
+    return console.error(err.message);
+  }
+  console.log('Connected to the in-memory SQlite database.');
+});
+
 
 // close the db
 function closeDB() {
@@ -121,22 +120,27 @@ app.get('/indextest', function (req, res) { // req = incoming request, res = out
 
 app.get('/quiz/html', function (req, res) { // req = incoming request, res = outgoing response
    // SELECT fr database put
-  let htmlDB = `SELECT question FROM html`;
-  openDB();
-  db.all(htmlDB, [], (err, rows) => {
+
+  var htmlDB = `SELECT question FROM html`;
+
+  var hData = db.all(htmlDB, [], (err, rows) => {
+
     if (err) {
       throw err;
     }
     rows.forEach((row) => {
       console.log(row);
     });
+    return rows
   });
   closeDB();
+  console.log(typeof hData);
 
   var quizzes = ['HTML', 'CSS', 'JS']
   res.render('html', { // res = outgoing response
     // this is the sendy part
     // dbinfo: databsinfo
+    htmlQuestions: hData,
     listOfQuizzes: quizzes
   })
 })
