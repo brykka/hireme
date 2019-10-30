@@ -1,8 +1,15 @@
 h2 this is html question page
 
-include qCard.pug
-include qCard.pug
-include qCard.pug
+//- include qCard.pug
+//- include qCard.pug
+//- include qCard.pug
+table
+  for question in htmlQuestions
+    tr
+      td= question
+
+        // We indent this so that the image is a link
 
 // submit
 include submitButton.pug
+
