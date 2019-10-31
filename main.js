@@ -131,7 +131,20 @@ app.get('/quiz/html', function (req, res) { // req = incoming request, res = out
     rows.forEach((row) => {
       console.log(row);
     });
-    return rows
+      for (var i = 0; i < rows.length; i++) {
+
+            // Create an object to save current row's data
+            var html = {
+              'question':rows[i].question,
+              'answer1':rows[i].answer1,
+              'answer2':rows[i].answer2,
+              'answer3':rows[i].answer3,
+              'answer4':rows[i].answer4,
+              'correctanswer':rows[i].correctAnswer
+
+            }
+            // Add object into array
+        }
   });
   closeDB();
   console.log(typeof hData);
