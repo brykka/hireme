@@ -2,7 +2,7 @@
   background-color: steelblue;
   text-align: center;
   float: left;
-  width: 30%; 
+  width: 30%;
   padding: 5px;
   margin: 5px;
 }
@@ -13,10 +13,12 @@
   font-size: 20px;
 }
 .bioCard div img{
-	width: 90%;
+	width: 70%;
 }
-.bioCard div .icon img{
-	width: 30%;
-	float: left;
+.bioCard div .icon a{
+	width: 40%;
+    margin: 0 auto;
+	float: center;
+    display: inline-block;
 
 }
