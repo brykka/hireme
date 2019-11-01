@@ -20,8 +20,6 @@ html
 
       div
         h3=person2.name
-        p=person2.bio
-        img(src=person2.avatar)
         #icon
           a(href=person2.linkedin target="_blank")
             img(src=icon.linkedin)
@@ -29,10 +27,12 @@ html
             img(src=icon.github)
           a(href=person2.website target="_blank")
             img(src=icon.site)
+        #avi
+          img(src=person1.avatar)
+        p=person1.bio
+
       div
         h3=person3.name
-        p=person3.bio
-        img(src=person3.avatar)
         #icon
           a(href=person3.linkedin target="_blank")
             img(src=icon.linkedin)
@@ -40,3 +40,6 @@ html
             img(src=icon.github)
           a(href=person3.website target="_blank")
             img(src=icon.site)
+        #avi
+          img(src=person3.avatar)
+        p=person3.bio
