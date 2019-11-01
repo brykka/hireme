@@ -1,27 +1,47 @@
+.bioCard {
+  display: flex;
+  justify-content: space-around;
+}
+
 .bioCard div {
-  background-color: steelblue;
+  background-color: #dee2e5;
   text-align: center;
   float: left;
-  width: 30%;
+  width: 27%;
   padding: 5px;
   margin: 5px;
-}
-.bioCard p {
-  color: white;
-  font-family: 'Roboto', sans-serif
+  border-radius: 4px;
+  font-family: 'Roboto', sans-serif;
   font-weight: lighter;
-  font-size: 20px;
-  height: 15vh;
 }
+
+.bioCard h3 {
+  font-size: 30px;
+  font-weight: lighter;
+}
+
+.bioCard p {
+  color: #888989;
+  font-size: 20px;
+  height: 8vh;
+  padding: 15px;
+}
+
 .bioCard div img{
   width: 70%;
   border-radius: 15px;
+  padding: 10px;
 }
-
 
 .bioCard #icon {
   display: inline-flex;
-  width: 100%;
+  width: 95%;
+  justify-content: space-around;
+  padding: 0 auto;
 }
 
-
+.bioCard #icon a {
+    width: 50px;
+    height: auto;
+    padding: 0 auto;
+ }
