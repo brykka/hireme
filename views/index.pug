@@ -10,7 +10,7 @@ html
   body
   div.quizzes
     row
-      h2 Which test do you want to take?
+      h1 Which test do you want to take?
 
     row
       each val in listOfQuizzes
@@ -20,9 +20,13 @@ html
             img(src='/img/' + val + '.png')
 
   div.bios
+    row
+    h1 Who are we?
 
+    row
     h2 #{body}
 
+    row
       include bioCard.pug
 
     // to target the nameand stuff you are going to have to do it the long way h1=person1.name
