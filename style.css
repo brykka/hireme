@@ -14,6 +14,7 @@ h1 {
 }
 h2 {
   text-align: center;
+  height: 10vh;
 }
 .section {
   background-color: steelblue;
@@ -37,5 +38,9 @@ a {
 
 .bios {
   background-color: #bbc0c3;
-  height: 50vh;
+  height: 100vh;
+}
+
+.bios h2 .body {
+  height: 40vh;
 }
