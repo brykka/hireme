@@ -7,6 +7,7 @@
   background-color: #dee2e5;
   text-align: center;
   width: 27%;
+  height: max-content;
   border-radius: 4px;
   font-family: 'Roboto', sans-serif;
   font-weight: lighter;
@@ -24,13 +25,15 @@
 .bioCard p {
   color: #888989;
   font-size: 20px;
-  height: 8vh;
+  padding: 30px;
 }
 
 .bioCard #avi img{
   border-radius: 15px;
   padding: 10px;
   justify-content: center;
+  height: 250px;
+  width: auto;
 }
 
 .bioCard #icon {

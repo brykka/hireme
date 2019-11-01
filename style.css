@@ -7,7 +7,7 @@ include components/language.css
 }
 
 .quizzes {
-  background-color: #f1fffa;
+  background-color: #dee2e5;
   height: 85vh;
   display: flex;
   flex-direction: column;
