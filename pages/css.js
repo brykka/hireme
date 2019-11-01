@@ -23,7 +23,7 @@ db.all('SELECT * FROM new_css', function(err, rows) {
   // For each row that is returned from that SELECT we will ...
   rows.forEach((row) => {
     // ... create a new entry into the questionData hash/dictionary.
-    // I am using the [row.id] in line 25 mostly just as a counter
+    // I am using the [row.id] in line 27 mostly just as a counter
     questionData[row.id] = {
       // All of the ".whatever" bits in these lines are the column titles in the new_css table
       "id": row.id,
@@ -76,6 +76,6 @@ db.close();
 // This is the bit that allows us to treat this like a module/library. We will 
 // send the questionData variable that we built to whatever other script asks
 // for it (main.js in this case).
-// To "ask for" this data in main.js we can do one of these (line 165 in main.js):
+// To "ask for" this data in main.js we can do one of these (line 164 in main.js):
 //   var css = require('./pages/css.js')
 module.exports = questionData
