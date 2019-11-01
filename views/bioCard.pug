@@ -7,8 +7,6 @@ html
     div.bioCard
       div
         h3=person1.name
-        p=person1.bio
-        img(src=person1.avatar)
         #icon
           a(href=person1.linkedin target="_blank")
             img(src=icon.linkedin)
@@ -16,6 +14,9 @@ html
             img(src=icon.github)
           a(href=person1.website target="_blank")
             img(src=icon.site)
+        #avi
+          img(src=person1.avatar)
+        p=person1.bio
 
       div
         h3=person2.name

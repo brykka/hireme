@@ -183,37 +183,6 @@ app.get('/result', function (req, res) {
 })
 
 
-// app.post('/quiz/html', function (req, res) {
-//   res.render('htmlResponse', {
-//     listOfHtmlQuestions
-//     listofCorrectHtmlAnswers
-//     listOfSuppliedHtmlAnswers
-//     correctPercentage
-//   })
-// })
-
-// app.post('/quiz/css', function (req, res) {
-//   res.render('cssResponse', {
-//     listOfCssQuestions
-//     listofCorrectCssAnswers
-//     listOfSuppliedCssAnswers
-//     correctPercentage
-//   })
-// })
-
-// app.post('/quiz/js', function (req, res) {
-//   res.render('jsResponse', {
-//     listOfJsQuestions
-//     listofCorrectJsAnswers
-//     listOfSuppliedJsAnswers
-//     correctPercentage
-//   })
-// })
-
-var listOfHtmlQuestions = {}
-var listOfCssQuestions = {}
-var listOfJsQuestions = {}
-
 var server = app.listen(8081, function () {
    var host = server.address().address
    var port = server.address().port

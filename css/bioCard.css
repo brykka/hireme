@@ -1,18 +1,22 @@
 .bioCard {
   display: flex;
   justify-content: space-around;
+
 }
 
 .bioCard div {
   background-color: #dee2e5;
   text-align: center;
-  float: left;
   width: 27%;
   padding: 5px;
   margin: 5px;
   border-radius: 4px;
   font-family: 'Roboto', sans-serif;
   font-weight: lighter;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .bioCard h3 {
@@ -27,14 +31,15 @@
   padding: 15px;
 }
 
-.bioCard div img{
-  width: 70%;
+.bioCard #avi img{
   border-radius: 15px;
   padding: 10px;
+  justify-content: center;
 }
 
 .bioCard #icon {
-  display: inline-flex;
+  display: flex;
+  flex-direction: row;
   width: 95%;
   justify-content: space-around;
   padding: 0 auto;
@@ -44,4 +49,8 @@
     width: 50px;
     height: auto;
     padding: 0 auto;
+ }
+
+ .bioCard #icon img {
+  height: 30px;
  }
