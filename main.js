@@ -118,11 +118,7 @@ app.get('/indextest', function (req, res) { // req = incoming request, res = out
   })
 })
 
-
-
-
-
-
+app.get('/quiz/html', function (req, res) { // req = incoming request, res = outgoing response
   var htmlDB = `SELECT question FROM html`;
   var hData = db.all(htmlDB, [], (err, rows) => {
 
@@ -157,7 +153,7 @@ app.get('/indextest', function (req, res) { // req = incoming request, res = out
     htmlQuestions: hData,
     listOfQuizzes: quizzes
   })
-
+})
 
 app.get('/quiz/css', function (req, res) { // req = incoming request, res = outgoing response
   // Importing the backend code for the css page.
