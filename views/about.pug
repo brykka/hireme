@@ -1,10 +1,8 @@
-html
-  head
-    title
-  body
+body
+    include header.pug
     h2 #{body}
     ul
-      li= person1.name + ": " + person1.bio + ' ' + person1.contact
-      li= person2.name + ": " + person2.bio + ' ' + person2.contact
-      li= person3.name + ": " + person3.bio + ' ' + person3.contact
+        li= person1.name + ": " + person1.bio + ' ' + person1.contact
+        li= person2.name + ": " + person2.bio + ' ' + person2.contact
+        li= person3.name + ": " + person3.bio + ' ' + person3.contact
     a(href='indextest') Back to quizzes

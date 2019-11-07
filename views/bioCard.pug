@@ -1,45 +1,42 @@
-html
-  head
-    style
-      include ../css/bioCard.css
+body
+    include header.pug
 
-  body
     div.bioCard
-      div
-        h3=person1.name
-        #icon
-          a(href=person1.linkedin target="_blank")
-            img(src=icon.linkedin)
-          a(href=person1.github target="_blank")
-            img(src=icon.github)
-          a(href=person1.website target="_blank")
-            img(src=icon.site)
-        #avi
-          img(src=person1.avatar)
-        p=person1.bio
+        div
+            h3=person1.name
+            #icon
+                a(href=person1.linkedin target="_blank")
+                    img(src=icon.linkedin)
+                a(href=person1.github target="_blank")
+                    img(src=icon.github)
+                a(href=person1.website target="_blank")
+                    img(src=icon.site)
+            #avi
+                img(src=person1.avatar)
+            p=person1.bio
 
-      div
-        h3=person2.name
-        #icon
-          a(href=person2.linkedin target="_blank")
-            img(src=icon.linkedin)
-          a(href=person2.github target="_blank")
-            img(src=icon.github)
-          a(href=person2.website target="_blank")
-            img(src=icon.site)
-        #avi
-          img(src=person2.avatar)
-        p=person2.bio
+        div
+            h3=person2.name
+            #icon
+                a(href=person2.linkedin target="_blank")
+                    img(src=icon.linkedin)
+                a(href=person2.github target="_blank")
+                    img(src=icon.github)
+                a(href=person2.website target="_blank")
+                    img(src=icon.site)
+            #avi
+                img(src=person2.avatar)
+            p=person2.bio
 
-      div
-        h3=person3.name
-        #icon
-          a(href=person3.linkedin target="_blank")
-            img(src=icon.linkedin)
-          a(href=person3.github target="_blank")
-            img(src=icon.github)
-          a(href=person3.website target="_blank")
-            img(src=icon.site)
-        #avi
-          img(src=person3.avatar)
-        p=person3.bio
+        div
+            h3=person3.name
+            #icon
+                a(href=person3.linkedin target="_blank")
+                    img(src=icon.linkedin)
+                a(href=person3.github target="_blank")
+                    img(src=icon.github)
+                a(href=person3.website target="_blank")
+                    img(src=icon.site)
+            #avi
+                img(src=person3.avatar)
+            p=person3.bio
