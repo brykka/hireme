@@ -1,25 +1,27 @@
 var express = require('express');
 var app = express();
-var sqlite3 = require('sqlite3').verbose();
+// var sqlite3 = require('sqlite3').verbose();
+//
+// var db = new sqlite3.Database('./hireme.db', (err) => {
+//   // open the db
+//   if (err) {
+//     return console.error(err.message);
+//   }
+//   console.log('Connected to the in-memory SQlite database.');
+// });
+// console.log(db);
+//
+// // close the db
+// function closeDB() {
+//   db.close((err) => {
+//     if (err) {
+//       return console.error(err.message);
+//     }
+//     console.log('Close the database connection.');
+//   });
+// }
 
-var db = new sqlite3.Database('./hireme.db', (err) => {
-  // open the db
-  if (err) {
-    return console.error(err.message);
-  }
-  console.log('Connected to the in-memory SQlite database.');
-});
-console.log(db);
 
-// close the db
-function closeDB() {
-  db.close((err) => {
-    if (err) {
-      return console.error(err.message);
-    }
-    console.log('Close the database connection.');
-  });
-}
 
 // When we reference local (on your computer) files there are two ways we can do
 // it, absolute and relative. If we are using absolute values it might looks

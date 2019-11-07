@@ -1,34 +1,26 @@
-html
-  head
-    style
-      include ../style.css
-      include ../css/languages.css
-      include ../css/langCard.css
-      include ../css/bioCard.css
+body  
+    include header.pug  
 
-    title Hire me test
-  body
-  div.quizzes
-    row
-      h1 Which test do you want to take?
+    div.quizzes
+        row
+            h1 Which test do you want to take?
 
-    row
-      each val in listOfQuizzes
-        div.langCard
-          a(href='quiz/' + val) #{val}
-            // We indent this so that the image is a link
-            img(src='/img/' + val + '.png')
+        row
+            each val in listOfQuizzes
+                div.langCard
+                    a(href='quiz/' + val) #{val}
+                        // We indent this so that the image is a link
+                        img(src='/img/' + val + '.png')
 
-  div.bios
-    row
-    h1 Who are we?
+    div.bios
+        row
+        h1 Who are we?
 
-    row
-    h2 #{body}
+        row
+        h2 #{body}
 
-    row
-      include bioCard.pug
+        row
+            include bioCard.pug
 
-    // to target the nameand stuff you are going to have to do it the long way h1=person1.name
-    // p=person.bio
-
+        // to target the nameand stuff you are going to have to do it the long way h1=person1.name
+        // p=person.bio
