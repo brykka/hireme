@@ -1,27 +1,32 @@
 var express = require('express');
 var app = express();
-// var sqlite3 = require('sqlite3').verbose();
-//
-// var db = new sqlite3.Database('./hireme.db', (err) => {
-//   // open the db
-//   if (err) {
-//     return console.error(err.message);
-//   }
-//   console.log('Connected to the in-memory SQlite database.');
-// });
-// console.log(db);
-//
-// // close the db
-// function closeDB() {
-//   db.close((err) => {
-//     if (err) {
-//       return console.error(err.message);
-//     }
-//     console.log('Close the database connection.');
-//   });
-// }
+var sqlite3 = require('sqlite3').verbose();
 
+var db = new sqlite3.Database('./hireme.db', (err) => {
+    // open the db
+    if (err) {
+        return console.error(err.message);
+    }
+    console.log('Connected to the in-memory SQlite database.');
+});
+console.log(db);
 
+// close the db
+function closeDB() {
+    db.close((err) => {
+        if (err) {
+            return console.error(err.message);
+        }
+        console.log('Close the database connection.');
+    });
+}
+
+// js file is included here:
+var fs = require('fs');
+eval(fs.readFileSync('./pages/index.js') + '');
+eval(fs.readFileSync('./pages/html.js') + '');
+eval(fs.readFileSync('./pages/css.js') + '');
+eval(fs.readFileSync('./pages/javascript.js') + '');
 
 // When we reference local (on your computer) files there are two ways we can do
 // it, absolute and relative. If we are using absolute values it might looks
@@ -71,128 +76,18 @@ app.set('view engine', 'pug')
 //   app.use("/img", express.static('/Users/myname/git-projects/hireme/img'));
 app.use("/img", express.static(path.join(__dirname, 'img')));
 
-app.get('/indextest', function (req, res) { // req = incoming request, res = outgoing response
-  var quizzes = ['HTML', 'CSS', 'JS']
-  var story = 'We met at a coding meetup in October and decied to get together to work on this project to practice working on front end development in a team.'
 
-  var person1 = 'Ijen'
-  var person2 = 'Mimi'
-  var person3 = 'Bryenne'
-  var person1Image = 'https://github.com/theyij.png?size=200.src'
-  var person2Image = 'https://github.com/Miimii1010.png?size=200'
-  var person3Image = 'https://avatars1.githubusercontent.com/u/47349194?s=460&v=4'
-  var linkedin = 'https://image.flaticon.com/icons/svg/1384/1384014.svg'
-  var github = 'https://image.flaticon.com/icons/svg/25/25231.svg'
-  var website = 'https://image.flaticon.com/icons/svg/1242/1242392.svg'
-
-  res.render('index', { // res = outgoing response
-    icon: {
-    	linkedin: linkedin,
-    	github: github,
-    	site: website
-    },
-    listOfQuizzes: quizzes,
-    body: story,
-    person1: {
-    	name: person1,
-    	bio: "Currently looking for new challenges and opportunities to contribute in Front-End web-development. ",
-    	avatar: person1Image,
-    	linkedin: "https://www.linkedin.com/in/yangijen/",
-    	github:"https://github.com/theyij",
-    	website:"https://yijen.netlify.com"
-    },
-    person2: {
-    	name: person2,
-    	bio: "This is a little bit of info about me. Here is my history, current and future projects. This is what I am intereseted in.",
-    	avatar: person2Image,
-    	linkedin: "https://www.linkedin.com/",
-    	github:"https://github.com/Miimii1010",
-    	website:"https://codepen.io/"
-    },
-    person3: {
-    	name: person3,
-    	bio: "This is a little bit of info about me. Here is my history, current and future projects. This is what I am intereseted in.",
-    	avatar: person3Image,
-    	linkedin: "https://www.linkedin.com/",
-    	github:"https://github.com/brykka",
-    	website:"https://codepen.io/"
-    }
-  })
-})
-
-app.get('/quiz/html', function (req, res) { // req = incoming request, res = outgoing response
-  var htmlDB = `SELECT question FROM html`;
-  var hData = db.all(htmlDB, [], (err, rows) => {
-
-    if (err) {
-      throw err;
-    }
-
-    // new hash
-
-    rows.forEach((row) => {
-      // hash += row
-      console.log(row);
-    });
-      for (var i = 0; i < rows.length; i++) {
-
-            // Create an object to save current row's data
-            var html = {
-              'question':rows[i].question,
-              'answer1':rows[i].answer1,
-              'answer2':rows[i].answer2,
-              'answer3':rows[i].answer3,
-              'answer4':rows[i].answer4,
-              'correctanswer':rows[i].correctAnswer
-            }
-        }
-  });
-  closeDB();
-  console.log(typeof hData);
-
-  var quizzes = ['HTML', 'CSS', 'JS']
-  res.render('html', { // res = outgoing response
-    htmlQuestions: hData,
-    listOfQuizzes: quizzes
-  })
-})
-
-app.get('/quiz/css', function (req, res) { // req = incoming request, res = outgoing response
-  // Importing the backend code for the css page.
-  // Use this format to break main.js down into more manageable parts.
-  // The "var css" bit is what we will send to the pug template
-  var css = require('./pages/css.js');
-  // Send (aka render) the page with the 'css' pug template.
-  res.render('css', { // res = outgoing response
-    // cssData is the variable we will use in the pug template
-    // css is the variable from line 164
-    "cssData": css
-  });
-})
-
-app.get('/quiz/js', function (req, res) { // req = incoming request, res = outgoing response
-  var quizzes = ['HTML', 'CSS', 'JS']
-  // SELECT fr database put
-  // var databsinfo = SELECT FROM db
-  res.render('js', { // res = outgoing response
-    // this is the sendy part
-    // dbinfo: databsinfo
-    listOfQuizzes: quizzes
-  })
-})
-
-app.get('/result', function (req, res) {
-  // body...
-  res.render('result', {
-  })
+app.get('/result', function(req, res) {
+    // body...
+    res.render('result', {})
 })
 
 var listOfHtmlQuestions = {}
 var listOfCssQuestions = {}
 var listOfJsQuestions = {}
 
-var server = app.listen(8081, function () {
-   var host = server.address().address
-   var port = server.address().port
-   console.log("Example app listening at http://%s:%s", host, port)
+var server = app.listen(8081, function() {
+    var host = server.address().address
+    var port = server.address().port
+    console.log("Example app listening at http://%s:%s", host, port)
 })
