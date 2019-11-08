@@ -1,12 +1,19 @@
 body
     include header.pug
     div.qCardBody 
-        div
-            h1 This is a Question card
-            p ans1
-            p ans2
-            p ans3
-            p ans4
-            h4 ps.will insert questions from database in the future(qCard.pug)
+        
+        ul
+            each i in cssData
+                div.aQuestion
+                    h1 
+                        li= i.question
+                    p 
+                        li= i.answer1
+                    p 
+                        li= i.answer2
+                    p 
+                        li= i.answer3
+                    p 
+                        li= i.answer4
     script
         include ../click.js

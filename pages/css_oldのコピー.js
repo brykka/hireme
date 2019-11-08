@@ -19,20 +19,20 @@ var questionData = {}
 // Query (aka SELECT) the data from the database.
 // I created a new table called "new_css" mostly just so that we could have column
 // names that don't contain any spaces.
-db.all('SELECT * FROM css', function(err, rows) {
+db.all('SELECT * FROM new_css', function(err, rows) {
   // For each row that is returned from that SELECT we will ...
   rows.forEach((row) => {
     // ... create a new entry into the questionData hash/dictionary.
     // I am using the [row.id] in line 27 mostly just as a counter
-    questionData[row.question] = {
+    questionData[row.id] = {
       // All of the ".whatever" bits in these lines are the column titles in the new_css table
-      // "id": row.id,
+      "id": row.id,
       "question": row.question,
-      "answer1": row.ans1,
-      "answer2": row.ans2,
-      "answer3": row.ans3,
-      "answer4": row.ans4,
-      "correct_answer": row.correctAns
+      "answer1": row.answer1,
+      "answer2": row.answer2,
+      "answer3": row.answer3,
+      "answer4": row.answer4,
+      "correct_answer": row.correct_answer
     }
   })
 });
