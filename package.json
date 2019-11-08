@@ -16,6 +16,9 @@
   "bugs": {
     "url": "https://github.com/brykka/hireme/issues"
   },
+   "engines": {
+    "node": "10.x"
+  },
   "homepage": "https://github.com/brykka/hireme#readme",
   "dependencies": {
     "express": "^4.17.1",
