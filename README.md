@@ -20,9 +20,10 @@ First stage will have a hardcode structure. Includes landing page, question page
 Then, will use database to make it dynamic
 
 ## Project Diffculity
-* problem A
-* problem B
-* problem C
+
+* subject1
+
+* subject2
 
 ## Solution
 With the help of ___ tutorial and information from ___ . 
