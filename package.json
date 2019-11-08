@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/brykka/hireme/issues"
   },
-   "engines": {
+  "engines": {
     "node": "12.13.0"
   },
   "homepage": "https://github.com/brykka/hireme#readme",
