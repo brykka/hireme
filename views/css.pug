@@ -1,7 +1,12 @@
 body
     include header.pug
-    h2 this is css question page
-
+    h2 this is CSS question page
+    div.qCardBody     
+        ul
+            each i in cssData
+                include qCard.pug
+                
+    
     //- table
     //-     tr
     //-         //- th='ID'
@@ -28,8 +33,9 @@ body
     //- each i in cssData
     //-     p #{i.id} - #{i.question} - #{i.answer1} - #{i.answer2} - #{i.answer3} - #{i.answer4} - #{i.correct_answer}
 
-    include qCard.pug
-    //- include qCard.pug
 
     // submit
     include submitButton.pug
+script
+    include ../click.js
+            

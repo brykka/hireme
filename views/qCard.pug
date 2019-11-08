@@ -1,19 +1,12 @@
-body
-    include header.pug
-    div.qCardBody 
-        
-        ul
-            each i in cssData
-                div.aQuestion
-                    h1 
-                        li= i.question
-                    p 
-                        li= i.answer1
-                    p 
-                        li= i.answer2
-                    p 
-                        li= i.answer3
-                    p 
-                        li= i.answer4
-    script
-        include ../click.js
+div.aQuestion
+    h1 
+        li= i.question
+    p 
+        li= i.answer1
+    p 
+        li= i.answer2
+    p 
+        li= i.answer3
+    p 
+        li= i.answer4
+    
