@@ -1,4 +1,4 @@
-app.get('/indextest', function(req, res) { // req = incoming request, res = outgoing response
+app.get('/', function(req, res) { // req = incoming request, res = outgoing response
     var quizzes = ['HTML', 'CSS', 'JS']
     var story = 'We met at a coding meetup in October and decied to get together to work on this project to practice working on front end development in a team.'
 
