@@ -37,38 +37,6 @@ db.all('SELECT * FROM new_css', function(err, rows) {
   })
 });
 
-// Basically when this .forEach loop is finished your questionData variable will look like this:
-//
-// questionData = {
-//   "1": {
-//     "id": "1",
-//     "question": "Who is not in the study group",
-//     "answer1": "Bryenne",
-//     "answer2": "Mimi",
-//     "answer3": "IJen",
-//     "answer4": "Stark",
-//     "correct_answer": "Stark"
-//   },
-//   "2": {
-//     "id": "2",
-//     "question": "Example question 2",
-//     "answer1": "Example answer 1",
-//     "answer2": "Example answer 2",
-//     "answer3": "Example answer 3",
-//     "answer4": "Example answer 4",
-//     "correct_answer": "Example answer 2"
-//   },
-//   "3": {
-//     "id": "3",
-//     "question": "Another example question 3",
-//     "answer1": "Another example answer 1",
-//     "answer2": "Another example answer 2",
-//     "answer3": "Another example answer 3",
-//     "answer4": "Another example answer 4",
-//     "correct_answer": "Another example answer 1"
-//   }
-// }
-
 
 // We have no more use for this database at the moment so we will close the connection
 db.close();
