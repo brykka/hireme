@@ -1,10 +1,14 @@
 body
     include header.pug
     h2 this is HTML question page
-    div.qCardBody     
-        ul
-            each i in htmlData
-                include qCard.pug
+    div.qCardBody
+      -
+        const keys = Object.keys(htmlData);
+        const randomIndex = keys[Math.floor(Math.random() * keys.length)];
+        const randomHtml = htmlData[randomIndex];
+      ul
+        each i in randomHtml
+            include qCard.pug
     // submit
     include submitButton.pug
 script
