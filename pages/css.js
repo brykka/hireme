@@ -7,7 +7,7 @@ var db = new sqlite3.Database('./hireme.db', (err) => {
 });
 
 var questionData = {};
-db.all('SELECT rowid, * FROM css', function(err, rows) {
+db.all('SELECT rowid, * FROM css ORDER BY RANDOM() LIMIT 5', function(err, rows) {
   rows.forEach((row) => {
 
     questionData[row.question] = {
