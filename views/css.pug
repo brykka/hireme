@@ -1,41 +1,13 @@
 body
     include header.pug
     h2 this is CSS question page
-    div.qCardBody     
+    div.qCardBody
         ul
             each i in cssData
                 include qCard.pug
-                
-    
-    //- table
-    //-     tr
-    //-         //- th='ID'
-    //-         th='Question'
-    //-         th='Answer 1'
-    //-         th='Answer 2'
-    //-         th='Answer 3'
-    //-         th='Answer 4'
-    //-         th='Correct Answer'
-    //-     // cssData is the name of the variable being sent from main.js on line 169
-    //- 
-    //-     each i in cssData
-    //-         tr
-    //-             // These ".whatever" bits match with the key names from lines 29-35 in css.js
-    //-             //- td #{i.id}
-    //-             td #{i.question}
-    //-             td #{i.answer1}
-    //-             td #{i.answer2}
-    //-             td #{i.answer3}
-    //-             td #{i.answer4}
-    //-             td #{i.correct_answer}
-
-    // You can loop over cssData with whatever tags you want
-    //- each i in cssData
-    //-     p #{i.id} - #{i.question} - #{i.answer1} - #{i.answer2} - #{i.answer3} - #{i.answer4} - #{i.correct_answer}
-
 
     // submit
     include submitButton.pug
 script
     include ../click.js
-            
+

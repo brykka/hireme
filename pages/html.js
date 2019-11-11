@@ -7,23 +7,46 @@ var db = new sqlite3.Database('./hireme.db', (err) => {
 });
 
 var questionData = {};
-db.all('SELECT rowid, * FROM html ORDER BY RANDOM() LIMIT 5;', function(err, rows) {
-  var counter = 1;
-  rows.forEach((row) => {
+db.all('SELECT question FROM html ORDER BY RANDOM() LIMIT 5;', function(err, questions) {
+  var counterQuestion = 1;
 
-    questionData[row.question] = {
-      "id": counter,
-      "question": row.question,
-      "answer1": row.ans1,
-      "answer2": row.ans2,
-      "answer3": row.ans3,
-      "answer4": row.ans4,
-      "correct_answer": row.correctAns
-    }
-    counter++
+  questions.forEach((question) => {
+    var question = question.question;
+    questionData[question.toString()] = {};
+    questionData[question]['id'] = counterQuestion;
+    questionData[question]['question'] = question;
+
+
+    db.get(`SELECT ans1, ans2, ans3, ans4 FROM html WHERE question == '${question}';`, function(err, answers) {
+      console.log(answers);
+      if (err) {
+        return console.error(err.message);
+      }
+        var counterAnswer = 1;
+        answers[Math.floor(Math.random() * answers.length)].forEach((answer) => {
+          console.log('answer');
+          console.log(answer);
+          var colName = 'ans'.concat(counterAnswer);
+            questionData[question]['answer'.concat(counterAnswer)] = answer.colName;
+            counterAnswer++;
+        })
+    })
+
+    // questionData[row.question] = {
+    //   "id": counter,
+    //   "question": row.question,
+    //   "answer1": row.ans1,
+    //   "answer2": row.ans2,
+    //   "answer3": row.ans3,
+    //   "answer4": row.ans4,
+    //   "correct_answer": row.correctAns
+    // }
+    counterQuestion++
   })
   console.log(questionData);
 });
+
+
 
 db.close();
 module.exports = questionData;
