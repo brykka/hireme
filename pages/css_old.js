@@ -7,10 +7,11 @@ var db = new sqlite3.Database('./hireme.db', (err) => {
 });
 
 var questionData = {};
-db.all('SELECT * FROM css', function(err, rows) {
+db.all('SELECT rowid, * FROM css', function(err, rows) {
   rows.forEach((row) => {
 
     questionData[row.question] = {
+      "id": row.rowid,
       "question": row.question,
       "answer1": row.ans1,
       "answer2": row.ans2,

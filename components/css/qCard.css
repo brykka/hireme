@@ -3,19 +3,51 @@
 	padding: 20px;
 	border: 1px solid steelblue;
 	text-align: center;
-	
 }
+
+
 .qCardBody h1 {
 	color: #454545;
 	font-size: 2em;
 	margin: 20px 20%;
 	background-color: steelblue;
-
 }
-.qCardBody p{
-	margin: 5px 30%;
-	background-color: pink;
-	text-align: left;
-	padding: 5px;
 
+.qCardBody p{
+    display: block;
+    position:relative;
+    margin: 0.67rem;
+    padding: 0.67rem;
+    background-color: red;
+    transition: all 0.4s ease-in-out;
+}
+
+input {
+    border: 1px solid darken(adjust-hue(#ffe, -23deg),15%);
+}
+.qCardBody p:hover{
+  background-color: black;
+  color: white;
+}
+
+  #answer1:checked {
+    &~ label[for='answer1'] {
+      background-color: #blue;
+    }
+  }
+  #answer2:checked {
+     &~ label[for='answer1'] {
+      background-color: #blue;
+    }
+  }
+  #answer3:checked {
+    &~ label[for='answer1'] {
+      background-color: #blue;
+    }
+  }
+  #answer4:checked {
+    &~ label[for='answer1'] {
+      background-color: #blue;
+    }
+  }
 }

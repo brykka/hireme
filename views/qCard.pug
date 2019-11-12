@@ -1,14 +1,24 @@
-div.aQuestion
-    h1
-        li= i.id
-    h1
-        li= i.question
-    p
-        li= i.answer1
-    p
-        li= i.answer2
-    p
-        li= i.answer3
-    p
-        li= i.answer4
+div.span4.aQuestion
+    h1= i.id
+
+    h1= i.question
+
+    p= i.answer1
+      input(type='radio', name='answerBoxes_', value='1')#answer1
+
+
+    p= i.answer2
+      input(type='radio', name='answerBoxes_', value='2')#answer2
+
+
+    p= i.answer3
+      input(type='radio', name='answerBoxes_', value='3')#answer3
+
+
+    p= i.answer4
+      input(type='radio', name='answerBoxes_', value='4')#answer4
+
+
+
+
 
