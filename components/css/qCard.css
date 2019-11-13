@@ -24,30 +24,9 @@
 
 input {
     border: 1px solid darken(adjust-hue(#ffe, -23deg),15%);
+    padding: 10px;
 }
 .qCardBody p:hover{
   background-color: black;
   color: white;
-}
-
-  #answer1:checked {
-    &~ label[for='answer1'] {
-      background-color: #blue;
-    }
-  }
-  #answer2:checked {
-     &~ label[for='answer1'] {
-      background-color: #blue;
-    }
-  }
-  #answer3:checked {
-    &~ label[for='answer1'] {
-      background-color: #blue;
-    }
-  }
-  #answer4:checked {
-    &~ label[for='answer1'] {
-      background-color: #blue;
-    }
-  }
 }
