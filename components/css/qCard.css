@@ -24,6 +24,7 @@
 
 input {
     border: 1px solid darken(adjust-hue(#ffe, -23deg),15%);
+    padding: 10px;
 }
 .qCardBody p:hover{
   background-color: black;
