@@ -1,4 +1,4 @@
-.qCard div{
+.qCard .aQuestion {
 	margin: 30px 20%;
 	padding: 30px 50px;
 	border: 2px dotted #fff;
@@ -13,30 +13,31 @@
 	/* background-color: steelblue; */
 }
 
-.qCard p{
+.answer {
     display: block;
     position:relative;
     margin: 0.67rem;
     padding: 0.67rem;
     background-color: #576172;
     color: #f9fdfe;
+    border: none;
     transition: all 0.4s ease-in-out;
 }
 
-.qCard p:hover{
+.answer:hover{
   background-color: #888989;
   color: white;
   cursor: pointer;
   box-shadow: 0 4px #4e5b70;
 }
 
-.qCard p:active {
+.button:hover {background-color: #888989}
+
+
+.answer:active {
   background-color: #3e8e41;
-  box-shadow: 0 2px #666;
+  box-shadow: 0 20px #666;
   transform: translateY(4px);
 }
 
-input {
-    border: 1px solid darken(adjust-hue(#ffe, -23deg),15%);
-    padding: 10px;
-}
+
