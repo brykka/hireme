@@ -18,15 +18,25 @@
     position:relative;
     margin: 0.67rem;
     padding: 0.67rem;
-    background-color: red;
+    background-color: #576172;
+    color: #f9fdfe;
     transition: all 0.4s ease-in-out;
+}
+
+.qCard p:hover{
+  background-color: #888989;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px #4e5b70;
+}
+
+.qCard p:active {
+  background-color: #3e8e41;
+  box-shadow: 0 2px #666;
+  transform: translateY(4px);
 }
 
 input {
     border: 1px solid darken(adjust-hue(#ffe, -23deg),15%);
     padding: 10px;
-}
-.qCard p:hover{
-  background-color: black;
-  color: white;
 }
