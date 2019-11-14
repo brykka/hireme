@@ -1,36 +1,33 @@
+/* General layout for all */
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
-
-.header{
-  margin: 50px 25%;
+body {
+    background-color: #ace0f9;
+    background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: #454545;
 }
 
-.quizzes {
-  background-color: #dee2e5;
-  height: 85vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+a {
+    text-decoration: none;
+    color: #454545;
 }
 
-h1 {
-  font-size: 40px;
-  font-weight: lighter;
-  text-align: center;
-  font-family: 'Roboto', sans-serif;
-
+h2 {
+    font-size: 5em;
+    font-weight: lighter;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
 }
 
-.quizzes h2 {
-  font-weight: lighter;
+row {
+    display: flex;
+    justify-content: center;
 }
 
-.bios {
-  background-color: #bbc0c3;
-  height: 130vh;
-}
-
-.bios h2 {
-  padding: 30px 19%;
-  font-weight: lighter;
+.projectTitle {
+    color: #fff;
+    font-size: 1.2em;
+    margin-top: 20px;
 }

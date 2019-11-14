@@ -1,13 +1,11 @@
 body
     include header.pug
-    h2 this is CSS question page
-    div.qCardBody
+    div.css
+        h2 How much do you know about CSS?
+    div.qCard
         ul
             each i in cssData
                 include qCard.pug
-
-    // submit
     include submitButton.pug
 script
     include ../click.js
-

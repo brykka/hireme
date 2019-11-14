@@ -1,9 +1,15 @@
-body
-    include header.pug
-
-    div.bioCard
-        div
-            h3=person1.name
+div.profile#profile              
+    row.profileSec
+        h3 Project Contributors
+    row.profileSec
+        p #{body}
+    row
+        div.person
+            h2=person1.name
+            #avi
+                img(src=person1.avatar)
+            
+            p=person1.bio
             #icon
                 a(href=person1.linkedin target="_blank")
                     img(src=icon.linkedin)
@@ -11,12 +17,13 @@ body
                     img(src=icon.github)
                 a(href=person1.website target="_blank")
                     img(src=icon.site)
+            
+        div.person
+            h2=person2.name
             #avi
-                img(src=person1.avatar)
-            p=person1.bio
-
-        div
-            h3=person2.name
+                img(src=person2.avatar)
+            
+            p=person2.bio
             #icon
                 a(href=person2.linkedin target="_blank")
                     img(src=icon.linkedin)
@@ -24,6 +31,4 @@ body
                     img(src=icon.github)
                 a(href=person2.website target="_blank")
                     img(src=icon.site)
-            #avi
-                img(src=person2.avatar)
-            p=person2.bio
+            
