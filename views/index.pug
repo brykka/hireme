@@ -1,26 +1,19 @@
 body
     include header.pug
-
-    div.quizzes
+        //- Entry Section - entry.pug
+    
+    div.entry#entry
         row
-            h1 Which test do you want to take?
+            h2.welcomeMessage How much do you know about web development?
 
         row
             each val in listOfQuizzes
-                div.langCard
-                    a(href='quiz/' + val) #{val}
+                div.entryCard
+                    a(href='quiz/' + val) 
                         // We indent this so that the image is a link
                         img(src='/img/' + val + '.png')
+                        //- Protfile Sectoin - portfile.pug
+    include profile.pug
 
-    div.bios
-        row
-        h1 Who are we?
-
-        row
-        h2 #{body}
-
-        row
-            include bioCard.pug
-
-        // to target the nameand stuff you are going to have to do it the long way h1=person1.name
-        // p=person.bio
+// to target the nameand stuff you are going to have to do it the long way h1=person1.name
+// p=person.bio

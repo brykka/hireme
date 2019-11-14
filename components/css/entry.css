@@ -1,0 +1,30 @@
+/* Entry Section */
+.entry {
+  height: 70vh;
+  padding: 0 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10vh 15vh 15vh 15vh;
+  /* background-color: rgba(255,255,255, 0.3); */
+
+}
+.entry .welcomeMessage{
+    font-size: 5em;
+    margin: 0;
+    font-weight: lighter;
+}
+
+.entryCard {
+  padding: 20px;
+  margin: 10px;
+  width: 20vw;
+  text-align: center;
+  justify-content: center;
+}
+
+.entryCard img {
+  height: 25vh;
+  margin: 0;
+}

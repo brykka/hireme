@@ -1,15 +1,15 @@
 body
     include header.pug
-    h2 this is HTML question page
-    div.qCardBody
-        // -
-        //   const keys = Object.keys(htmlData);
-        //   const randomIndex = keys[Math.floor(Math.random() * keys.length)];
-        //   const randomHtml = htmlData[randomIndex];
+    div.html
+        h2 How much do you know about HTML?
+    div.qCard
         ul
           each i in htmlData
             include qCard.pug
-    // submit
+        //   const keys = Object.keys(htmlData);
+        //   const randomIndex = keys[Math.floor(Math.random() * keys.length)];
+        //   const randomHtml = htmlData[randomIndex];
+        
     include submitButton.pug
 script
     include ../click.js
