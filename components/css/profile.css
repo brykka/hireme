@@ -4,21 +4,6 @@
   border: 2px dotted #fff;
 }
 
-.profile h2 {
-    font-size: 5em;
-    margin: 0;
-}
-.profile h3{
-    font-size: 3em;
-    margin: 0;
-    font-weight: lighter;
-
-}
-.profile p {
-  color: #646464;
-  font-size: 20px;
-}
-
 row.profileSec {
   margin: 0 30vh;
   font-weight: lighter;
@@ -34,7 +19,6 @@ div.person {
     flex-direction: column;
     align-items: center;
 }
-
 
 .person #avi img{
   border-radius: 20px;

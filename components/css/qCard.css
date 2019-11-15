@@ -33,10 +33,11 @@
   box-shadow: 2 2px #a3a3a3;
 }
 
+.button:hover {background-color: #888989}
+
+
 .answer:active {
   background-color: red;
   box-shadow: 0 20px #666;
   transform: translateY(4px);
 }
-
-
