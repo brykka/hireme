@@ -31,9 +31,9 @@ app.get('/', function(req, res) { // req = incoming request, res = outgoing resp
             name: person2,
             bio: "This is a little bit of info about me. Here is my history, current and future projects. This is what I am intereseted in.",
             avatar: person3Image,
-            linkedin: "https://www.linkedin.com/",
+            linkedin: "https://www.linkedin.com/in/bryenne-kay/",
             github: "https://github.com/brykka",
-            website: "https://codepen.io/"
+            website: "https://codepen.io/brykka"
         }
     })
 })
