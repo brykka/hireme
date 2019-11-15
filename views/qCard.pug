@@ -5,6 +5,23 @@ div.aQuestion
         span :
         span= i.question
 
+
+    // Remember that i.answers is a list when we built our data structure in
+    // html.js. Here we are looping over that list. When you loop a list there
+    // is the value of the item (in this case "answer") and there is also an
+    // "index" value. The index is an automatically generated number which
+    // represents the item's position within the list. We are getting the index
+    // so that we can use it in our html attributes.
+    each answer, index in i.answers
+      p= answer
+        // Below we set value=index without quotes so that 'index' is treated as
+        // a variable and not a string. The attribute will be rendered to the
+        // page as an increasing integer for each answer on this card.
+        // 
+        // Using &attributes we can combine a string ('answer') with the index
+        // of each item in our list. So if we have an index of 1 the 'id'
+        // attribute becomes 'answer1'
+        input(type='radio', name='answerBoxes_', value=index)&attributes({'id': 'answer' + index})
     div.answer= i.answer1
       // input(type='radio', name='answerBoxes_', value='1')#answer1
 
