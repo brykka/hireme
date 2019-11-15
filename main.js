@@ -2,6 +2,9 @@ var express = require('express');
 var app = express();
 var sqlite3 = require('sqlite3').verbose();
 
+var favicon = require('serve-favicon');
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
+
 var db = new sqlite3.Database('./hireme.db', (err) => {
     // open the db
     if (err) {
