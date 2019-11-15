@@ -7,8 +7,6 @@
   justify-content: center;
   align-items: center;
   margin: 10vh 15vh 15vh 15vh;
-  /* background-color: rgba(255,255,255, 0.3); */
-
 }
 .entry .welcomeMessage{
     font-size: 5em;
