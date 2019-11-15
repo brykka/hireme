@@ -11,8 +11,6 @@ var db = new sqlite3.Database('./hireme.db', (err) => {
 // Create an empty dictionary/hash. This is where we will store our question
 // data once we pull it out of the database.
 var questionData = {};
-
-// Select all columns from the database in random order
 db.all('SELECT * FROM html ORDER BY RANDOM() LIMIT 5;', function(err, questions) {
   // Create a counter. We will use this to ensure the question number is
   // consistent. When SELECTing with RANDOM() in the database the line

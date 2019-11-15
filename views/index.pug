@@ -1,7 +1,7 @@
 body
     include header.pug
         //- Entry Section - entry.pug
-    
+
     div.entry#entry
         row
             h2.welcomeMessage How much do you know about web development?
@@ -9,7 +9,7 @@ body
         row
             each val in listOfQuizzes
                 div.entryCard
-                    a(href='quiz/' + val) 
+                    a(href='quiz/' + val)
                         // We indent this so that the image is a link
                         img(src='/img/' + val + '.png')
                         //- Protfile Sectoin - portfile.pug
