@@ -21,7 +21,7 @@ app.get('/', function(req, res) { // req = incoming request, res = outgoing resp
         body: story,
         person1: {
             name: person1,
-            bio: "Currently looking for new challenges and opportunities to contribute in Front-End web-development. ",
+            bio: "Taiwanese Front-End Developer located in Tokyo. Enjoy the process of problem solving and challenging different technology.",
             avatar: person1Image,
             linkedin: "https://www.linkedin.com/in/yangijen/",
             github: "https://github.com/theyij",
