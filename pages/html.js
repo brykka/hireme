@@ -25,6 +25,7 @@ db.all('SELECT * FROM html ORDER BY RANDOM() LIMIT 5;', function(err, questions)
     // array/list. We just need to keep this in mind when we are working with
     // our pug file. It may change the way we loop over the data in pug.
     questionData[counter]['answers'] = shuffle(answers);
+    questionData[counter]['correct'] = question.correctAns;
 
     // Lastly, we increment the counter by 1 so the next entry in the
     // questionData dictionary is unique.

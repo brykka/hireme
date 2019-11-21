@@ -1,3 +1,12 @@
+// function get_answers(question, answer)
+//create an empty hash
+//create counter from 0
+//compare argument answer to htmlData.correctAns
+// if it is, then ++ counter
+// after comparing answers, find percentage
+//return perentage
+
+
 body
     include header.pug
     div.html
@@ -6,7 +15,7 @@ body
         ul
           each i in htmlData
             include qCard.pug
+              label(for="val")
+              input(id="answer_box", type="radio", name="hidden", value=0, checked="")
 
     include submitButton.pug
-//- script
-    //- include ../click.js

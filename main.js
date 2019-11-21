@@ -3,6 +3,8 @@ var app = express();
 var sqlite3 = require('sqlite3').verbose();
 var favicon = require('express-favicon');
 
+app.use(express.json());
+app.use(express.urlencoded())
 app.use(favicon(__dirname + '/img/favicon.png'));
 
 
@@ -68,9 +70,11 @@ app.use("/img", express.static(path.join(__dirname, 'img')));
 
 
 
-app.get('/result', function(req, res) {
-    // body...
-    res.render('result', {})
+app.post('/result', function(req, res) {
+    var body = req.body;
+    res.render('result', {
+      "body": body,
+    });
 })
 
 var listOfHtmlQuestions = {}
