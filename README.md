@@ -21,35 +21,36 @@ Then, will use database to make it dynamic
 
 ## Project Diffculity
 
-* subject1
+* Setup Node engine rendering pug
 
-* subject2
+* Pulling questions and answers from SQLite3 database
 
-## Solution
-With the help of ___ tutorial and information from ___ . 
+* Generating random questions for every refresh
 
 ## introduction
-[brykka](https://github.com/brykka) - brykka intro
-[miimii](https://github.com/Miimii1010) - miimii intro
-[yijen](https://github.com/theyij) - brykka intro
+[brykka](https://github.com/brykka) - Continuously looking to imporve and expand my knowledge with interesting new projects.
+[miimii](https://github.com/Miimii1010) - 
+[yijen](https://github.com/theyij) - Taiwanese Front-End Developer located in Tokyo. Enjoy the process of problem solving and challenging unknown technology.
 
 We met in a meetup in Tokyo
-After that, we decided to form a study group together
-Currently working on a quiz site to practise front-end design
+After that, we decided to form a study group together to improve individual skills and collaborate with others.
+Currently working on a quiz site to practise front-end technology.
 
 ## weekly log
+- 11/22 : Final adjustment on the project, calculate points, expend database, responsive css. 
+
+- 11/15 : Project functional in generating random questions and clean up css. 
+
 - 10/24
 I - Update landing page layout, link data from main.js to pug file. Feel free to update your personal site & linkedin url. Will work on database before next study session.  
 
-- 10/18 
+- 10/18 :
 
 I - Make this quiz application work with only HTML, CSS & Javascript today, will make it dynamic in the future
 
 B- started working on the homepage and tried to import css files
 
-- 10/11
-
-I - First study group : )) Setup github & git, decide to do a group project together
+- 10/11 : First study group : )) Setup github & git, decide to do a group project together
 
 
 
