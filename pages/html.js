@@ -56,11 +56,6 @@ db.close();
 // Return the questionData dictionary for pug to parse through.
 module.exports = questionData;
 
-const quizContainer = document.getElementById('qCard');
-const resultsContainer = document.getElementById('result');
-const submitButton = document.getElementById('submitButton');
-
-
 
 
 
