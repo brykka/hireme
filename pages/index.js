@@ -29,11 +29,11 @@ app.get('/', function(req, res) { // req = incoming request, res = outgoing resp
         },
         person2: {
             name: person2,
-            bio: "This is a little bit of info about me. Here is my history, current and future projects. This is what I am intereseted in.",
+            bio: "Continuously looking to imporve and expand my knowledge with interesting new projects.",
             avatar: person3Image,
             linkedin: "https://www.linkedin.com/in/bryenne-kay/",
             github: "https://github.com/brykka",
-            website: "https://codepen.io/brykka"
+            website: "https://bryennekay.com"
         }
     })
 })

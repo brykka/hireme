@@ -1,8 +1,7 @@
 var express = require('express');
 var app = express();
 var sqlite3 = require('sqlite3').verbose();
-
-const favicon = require('express-favicon');
+var favicon = require('express-favicon');
 
 app.use(favicon(__dirname + '/img/favicon.png'));
 
@@ -58,6 +57,7 @@ app.get('/quiz/JS', function(req, res) {
         "javascriptData": javascript,
     });
 })
+
 
 var path = require('path');
 // views is where we store the templates
