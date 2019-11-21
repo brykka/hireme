@@ -2,15 +2,11 @@
 	margin: 30px 20%;
 	padding: 30px 50px;
 	border: 2px dotted #fff;
-	/* text-align: center; */
 }
 
-
 .qCard h1 {
-	/* color: #fff; */
 	font-size: 3em;
 	margin: 0;
-	/* background-color: steelblue; */
 }
 
 .answer {
@@ -20,13 +16,12 @@
     padding: 0.67rem;
     background-color: #576172;
     color: #f9fdfe;
-    border: none;
     border-radius: 3px;
     box-shadow: 2px 2px #898989;
     transition: all 0.4s ease-in-out;
 }
 
-.answer:hover{
+.answer:hover {
   background-color: #888989;
   color: white;
   cursor: pointer;
@@ -34,11 +29,24 @@
 }
 
 
-.button:hover {background-color: #888989}
-
-
-.answer:checked {
+#answer_box:active {
   background-color: red;
   box-shadow: 0 20px #666;
   transform: translateY(4px);
+}
+
+.answer input[type=radio] {
+  visibility: hidden;
+}
+
+.answer input[type=radio]:active + label {
+  background-color: black;
+  color: #FAFAFA;
+}
+
+.answer:disabled {
+  opacity: 0.5;
+  background: #9ACFCC;
+  color: #00403C;
+  cursor: default;
 }

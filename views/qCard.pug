@@ -13,11 +13,3 @@ div.aQuestion
     // so that we can use it in our html attributes.
     each answer, index in i.answers
       div.answer= answer
-        // Below we set value=index without quotes so that 'index' is treated as
-        // a variable and not a string. The attribute will be rendered to the
-        // page as an increasing integer for each answer on this card.
-        //
-        // Using &attributes we can combine a string ('answer') with the index
-        // of each item in our list. So if we have an index of 1 the 'id'
-        // attribute becomes 'answer1'
-        // input(type='radio', name='answerBoxes_', value=index)&attributes({'id': 'answer' + index})
