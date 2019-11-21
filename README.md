@@ -29,7 +29,9 @@ Then, will use database to make it dynamic
 
 ## introduction
 [brykka](https://github.com/brykka) - Continuously looking to imporve and expand my knowledge with interesting new projects.
+
 [miimii](https://github.com/Miimii1010) - 
+
 [yijen](https://github.com/theyij) - Taiwanese Front-End Developer located in Tokyo. Enjoy the process of problem solving and challenging unknown technology.
 
 We met in a meetup in Tokyo
