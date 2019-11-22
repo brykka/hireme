@@ -35,14 +35,10 @@
   transform: translateY(4px);
 }
 
-#answer input[type=radio] {
-  visibility: visible;
+label #i {
+  visibility: hidden;
 }
 
-#answer input[type=radio]:active + label {
-  background-color: black;
-  color: #FAFAFA;
-}
 
 #answer:disabled {
   opacity: 0.5;
