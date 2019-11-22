@@ -6,11 +6,26 @@ div.aQuestion
 
     each answer, index in i.answers
           label
-            input(id="i", type="radio", name=`${i.answers}`, value=0, checked="", visibility="hidden")
+            input(id="i", type="radio", name=`${i.answers}`, value=0, checked="", visibility="hidden", onclick="changeColor()")
             div#answer= answer
 
+          script.
+            function changeColor() {
+              document.getElementById("answer").style.backgroundColor="black";
+            }
 
-          // input(id="i", type="radio", name=`${i.answers}`, value=0, checked="")
-          // label(for="i")
 
-
+// <div id="Myelement"
+//        onclick="changeColor()">
+// </div>
+//   <input name="MyColorPicker"
+//          type="color"
+//          id="MyColorPicker" />
+//   <script>
+//       function changeColor() {
+//           document.getElementById(
+//             "Myelement").style.backgroundColor =
+//               document.getElementById(
+//             "MyColorPicker").value;
+//       }
+//   </script>
