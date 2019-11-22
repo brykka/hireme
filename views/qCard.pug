@@ -5,6 +5,12 @@ div.aQuestion
         span= i.question
 
     each answer, index in i.answers
-        div#answer= answer
-          input(id="i", type="radio", name=`${i.answers}`, value=0, checked="")
-          label(for="i")
+          label
+            input(id="i", type="radio", name=`${i.answers}`, value=0, checked="", visibility="hidden")
+            div#answer= answer
+
+
+          // input(id="i", type="radio", name=`${i.answers}`, value=0, checked="")
+          // label(for="i")
+
+
