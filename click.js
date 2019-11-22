@@ -1,5 +1,6 @@
-var answer = document.querySelector("p");
+var answer = document.getElementById("#answer");
 
 answer.addEventListener("click", function(){
 
 })
+

@@ -9,7 +9,7 @@
 	margin: 0;
 }
 
-.answer {
+#answer {
     display: block;
     position:relative;
     margin: 0.67rem;
@@ -21,7 +21,7 @@
     transition: all 0.4s ease-in-out;
 }
 
-.answer:hover {
+#answer:hover {
   background-color: #888989;
   color: white;
   cursor: pointer;
@@ -35,16 +35,16 @@
   transform: translateY(4px);
 }
 
-.answer input[type=radio] {
-  visibility: hidden;
+#answer input[type=radio] {
+  visibility: visible;
 }
 
-.answer input[type=radio]:active + label {
+#answer input[type=radio]:active + label {
   background-color: black;
   color: #FAFAFA;
 }
 
-.answer:disabled {
+#answer:disabled {
   opacity: 0.5;
   background: #9ACFCC;
   color: #00403C;
