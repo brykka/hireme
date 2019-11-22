@@ -28,7 +28,7 @@
   box-shadow: 2 2px #a3a3a3;
 }
 
-/*#answer:checked {
+#answer:checked {
   background-color: red;
   box-shadow: 0 20px #666;
   transform: translateY(4px);
@@ -37,8 +37,9 @@
 
 
 label #i {
-/*  visibility: hidden;
-*/
+  visibility: hidden;
+}
+
 
 
 #answer:disabled {
@@ -46,7 +47,7 @@ label #i {
   background-color: #9ACFCC;
   color: #00403C;
   cursor: default;
-}*/
+}
 
 label #i {
   visibility: hidden;
