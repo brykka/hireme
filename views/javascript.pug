@@ -1,12 +1,9 @@
-body
-    include header.pug
+include header.pug
+div.section#quiz
     div.javascript
         h2 How much do you know about Javascript?
     div.qCard   
         ul
             each i in javascriptData
                 include qCard.pug
-    // submit
-    include submitButton.pug
-//- script
-    //- include ../click.js
+include submitButton.pug

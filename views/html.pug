@@ -6,19 +6,12 @@
 // after comparing answers, find percentage
 //return perentage
 
-
-body
-    include header.pug
+include header.pug
+div.section#quiz
     div.html
         h2 How much do you know about HTML?
-
     div.qCard
         ul
-          each i in htmlData
-            include qCard.pug
-
-
-
-
-    include submitButton.pug
-
+            each i in htmlData
+                include qCard.pug
+include submitButton.pug

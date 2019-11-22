@@ -1,7 +1,7 @@
 .buttonSec{
-	height: 15vh;
-	padding: 5vh;
 	text-align: center;
+    justify-content: center;
+	margin: 50px 0;
 }
 
 /* Basic styles */
@@ -9,13 +9,12 @@
   background: none;
   border: 0;
   box-sizing: border-box;
-  margin: 1em;
-  padding: 1em 2em;
+  padding: 20px 50px;
 
   box-shadow: inset 0 0 0 2px #2589BD;
   color: #2589BD;
   /* font-size: inherit; */
-  font-size: 1.5em;
+  font-size: 20px;
   font-weight: 700;
 
   position: relative;

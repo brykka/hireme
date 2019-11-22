@@ -1,0 +1,89 @@
+/* Mobile Styles */
+@media only screen and (max-width: 375px) {}
+
+/* Tablet Styles */
+@media only screen and (min-width: 376px) and (max-width: 960px) {
+    .section {
+        width: 100%;
+        padding: 10px 100px;
+    }
+
+    #entry {
+        margin: 15vh 0;
+    }
+
+    .header h2 {
+        font-size: 80px;
+        margin-bottom: 50px;
+    }
+
+    .entryCard img {
+        height: 150px;
+    }
+
+    .profile {
+        float: left;
+        width: 50%;
+    }
+    #person1{
+        padding-right: 10px;
+    }
+    #person2{
+        padding-left: 10px;
+    }
+    .profile p {
+        height: 150px;
+    }
+    #quiz.section{
+        width: 100%;
+        padding: 10px 150px;
+    }
+    .qCard .aQuestion {
+    	padding: 20px 50px;
+    }
+    .buttonSec{
+    	margin: 50px 0 150px 0;
+    }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+    .section {
+        width: 100%;
+        padding: 10px 300px;
+    }
+
+    #entry {
+        margin: 10vh 0;
+    }
+
+    .header h2 {
+        font-size: 80px;
+        margin-bottom: 50px;
+        font-weight: bold;
+    }
+
+    .entryCard img {
+        height: 150px;
+    }
+
+    .profile {
+        float: left;
+        width: 50%;
+    }
+    #person1{
+        padding-right: 20px;
+    }
+    #person2{
+        padding-left: 20px;
+    }
+    .profile p {
+        height: 80px;
+    }
+    .qCard .aQuestion {
+    	padding: 20px 100px;
+    }
+    .buttonSec{
+    	margin: 50px 0 150px 0;
+    }
+}
