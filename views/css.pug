@@ -1,12 +1,9 @@
-body
-    include header.pug
+include header.pug
+div.section#quiz
     div.css
-        h2 How much do you know about CSS?
+        h2 About CSS?
     div.qCard
         ul
             each i in cssData
                 include qCard.pug
-    div.button
-        include submitButton.pug
-//- script
-    //- include ../click.js
+include submitButton.pug

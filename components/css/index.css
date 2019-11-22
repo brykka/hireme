@@ -1,0 +1,76 @@
+/* Entry Section */
+.section {
+    width: 100%;
+    padding: 10px 30px;
+}
+
+row {
+    display: flex;
+    justify-content: center;
+}
+
+#entry {
+    margin: 23vh 0;
+}
+
+.header {
+    height: auto;
+    align-items: inherit;
+}
+
+.entry::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.entryCard {
+    justify-content: center;
+    float: left;
+    width: 33.33%;
+    padding: 0;
+    display: flex;
+    margin: 30px 5px;
+}
+
+.entryCard img {
+    height: 100px;
+}
+
+/* Profile section */
+#person1 {
+    order: 1;
+}
+
+#person2 {
+    order: 2;
+}
+
+.profile {
+    justify-content: center;
+    width: 100%;
+}
+
+.profile h2 {
+    font-size: 40px;
+    margin: 10px;
+}
+
+.profile .avi {
+    text-align: center;
+}
+
+.profile .avi img {
+    max-width: 200px;
+}
+
+.profile .icon {
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.profile .icon img {
+    width: 50px;
+    margin: 0 20px;
+}

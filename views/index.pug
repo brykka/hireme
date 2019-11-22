@@ -1,19 +1,16 @@
-body
-    include header.pug
-        //- Entry Section - entry.pug
-
-    div.entry#entry
-        row
-            h2.welcomeMessage How much do you know about web development?
-
-        row
-            each val in listOfQuizzes
-                div.entryCard
-                    a(href='quiz/' + val)
-                        // We indent this so that the image is a link
-                        img(src='/img/' + val + '.png')
-                        //- Protfile Sectoin - portfile.pug
-    include profile.pug
+include header.pug
+    //- Entry Section - entry.pug
+div.section#entry
+    row.header
+        h2 How much do you know about web development?
+    row.entry
+        each val in listOfQuizzes
+            div.entryCard
+                a(href='quiz/' + val)
+                    // We indent this so that the image is a link
+                    img(src='/img/' + val + '.png')
+                    //- Protfile Sectoin - portfile.pug
+include profile.pug
 
 // to target the nameand stuff you are going to have to do it the long way h1=person1.name
 // p=person.bio

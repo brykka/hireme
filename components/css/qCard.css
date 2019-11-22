@@ -1,12 +1,19 @@
+#quiz h2{
+    font-size: 32px;
+	font-weight: bold;
+}
+
 .qCard .aQuestion {
-	margin: 30px 20%;
-	padding: 30px 50px;
+	margin: 20px 0;
+	padding: 10px 20px;
 	border: 2px dotted #fff;
 }
 
-.qCard h1 {
-	font-size: 3em;
+.aquestion h3 {
+	font-size: 20px;
 	margin: 0;
+	font-weight: lighter;
+
 }
 
 #answer {

@@ -1,10 +1,11 @@
 div.aQuestion
 
-    h1= i.id
+    h3= i.id
         span :
         span= i.question
 
     each answer, index in i.answers
+
       label
         input(id="i", type="radio", name=`${i.answers}`, value=0, checked="", visibility="hidden", onclick="changeColor()")
         div#answer= answer

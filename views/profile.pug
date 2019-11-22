@@ -1,34 +1,30 @@
-div.profile#profile              
-    row.profileSec
-        h3 Project Contributors
-    row.profileSec
-        p #{body}
-    row
-        div.person
-            h2=person1.name
-            #avi
-                img(src=person1.avatar)
-            
-            p=person1.bio
-            #icon
-                a(href=person1.linkedin target="_blank")
-                    img(src=icon.linkedin)
-                a(href=person1.github target="_blank")
-                    img(src=icon.github)
-                a(href=person1.website target="_blank")
-                    img(src=icon.site)
-            
-        div.person
-            h2=person2.name
-            #avi
-                img(src=person2.avatar)
-            
-            p=person2.bio
-            #icon
-                a(href=person2.linkedin target="_blank")
-                    img(src=icon.linkedin)
-                a(href=person2.github target="_blank")
-                    img(src=icon.github)
-                a(href=person2.website target="_blank")
-                    img(src=icon.site)
-            
+div.section#profile
+    h2.content.underline Contributors
+    p.content #{body}
+div.section
+    div#person1.profile
+        h2.underline=person1.name
+        .avi
+            img(src=person1.avatar)
+
+        p=person1.bio
+        .icon
+            a(href=person1.linkedin target="_blank")
+                img(src=icon.linkedin)
+            a(href=person1.github target="_blank")
+                img(src=icon.github)
+            a(href=person1.website target="_blank")
+                img(src=icon.site)
+    div#person2.profile
+        h2.underline=person2.name
+        .avi
+            img(src=person2.avatar)
+        
+        p=person2.bio
+        .icon
+            a(href=person2.linkedin target="_blank")
+                img(src=icon.linkedin)
+            a(href=person2.github target="_blank")
+                img(src=icon.github)
+            a(href=person2.website target="_blank")
+                img(src=icon.site)
