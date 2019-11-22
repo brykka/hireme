@@ -35,6 +35,12 @@
   cursor: default;
 }
 
+
+label #i {
+/*  visibility: hidden;
+*/
+
+
 #answer:disabled {
   opacity: 0.5;
   background-color: #9ACFCC;
