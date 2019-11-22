@@ -11,11 +11,13 @@ body
     include header.pug
     div.html
         h2 How much do you know about HTML?
+
     div.qCard
         ul
           each i in htmlData
             include qCard.pug
               label(for="val")
-              input(id="answer", type="radio", name="hidden", value=0, checked="")
+              input(id="answer", type="radio", onclick="selectAnswer",
+              name="hidden", value=0, checked="")
 
     include submitButton.pug
