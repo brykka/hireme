@@ -1,6 +1,8 @@
-var answer = document.getElementById("#answer");
+var chosenAnswer = document.getElementById("answer");
+function selectAnswer(answer) {
+  alert ("Hello World!");
+}
+chosenAnswer.addEventListener("click", selectAnswer);
 
-answer.addEventListener("click", function(){
 
-})
 
