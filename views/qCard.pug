@@ -5,10 +5,13 @@ div.aQuestion
         span= i.question
 
     each answer, index in i.answers
-          label
-            input(id="i", type="radio", name=`${i.answers}`, value=0, checked="", visibility="hidden")
-            div#answer= answer
 
+      label
+        input(id="i", type="radio", name=`${i.answers}`, value=0, checked="", visibility="hidden", onclick="changeColor()")
+        div#answer= answer
+      script.
+        function changeColor() {
+            var chosenAnswer = document.getElementById('answer').length;
+            chosenAnswer.style.backgroundColor="black";
+          }
 
-          // input(id="i", type="radio", name=`${i.answers}`, value=0, checked="")
-          // label(for="i")

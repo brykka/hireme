@@ -35,21 +35,28 @@
   box-shadow: 2 2px #a3a3a3;
 }
 
-
-#answer_box:active {
+#answer:checked {
   background-color: red;
   box-shadow: 0 20px #666;
   transform: translateY(4px);
+  cursor: default;
 }
+
 
 label #i {
   visibility: hidden;
 }
 
 
+
 #answer:disabled {
   opacity: 0.5;
-  background: #9ACFCC;
+  background-color: #9ACFCC;
   color: #00403C;
   cursor: default;
 }
+
+label #i {
+  visibility: hidden;
+}
+
