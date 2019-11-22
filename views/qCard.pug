@@ -4,12 +4,7 @@ div.aQuestion
         span :
         span= i.question
 
-
-    // Remember that i.answers is a list when we built our data structure in
-    // html.js. Here we are looping over that list. When you loop a list there
-    // is the value of the item (in this case "answer") and there is also an
-    // "index" value. The index is an automatically generated number which
-    // represents the item's position within the list. We are getting the index
-    // so that we can use it in our html attributes.
     each answer, index in i.answers
-      div#answer= answer
+        div#answer= answer
+          input(id="i", type="radio", name=`${i.answers}`, value=0, checked="")
+          label(for="i")
