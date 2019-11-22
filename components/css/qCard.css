@@ -36,8 +36,8 @@
 }
 
 label #i {
-  visibility: hidden;
-}
+/*  visibility: hidden;
+*/}
 
 
 #answer:disabled {
