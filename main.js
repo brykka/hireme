@@ -68,18 +68,18 @@ app.set('views', process.cwd() + '/views')
 app.set('view engine', 'pug')
 app.use("/img", express.static(path.join(__dirname, 'img')));
 
-
+app.get('/result', function(req, res) {
+  res.render('result', {
+    // "body": body,
+  });
+})
 
 app.post('/result', function(req, res) {
     var body = req.body;
     res.render('result', {
-      "body": body,
+      // "body": body,
     });
 })
-
-var listOfHtmlQuestions = {}
-var listOfCssQuestions = {}
-var listOfJsQuestions = {}
 
 var server = app.listen(process.env.PORT || 8081, function() {
     var host = server.address().address
