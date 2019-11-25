@@ -7,8 +7,10 @@ div.aQuestion
     each answer, index in i.answers
 
       label
-        input(id="i", type="radio", name=`${i.answers}`, value=0, checked="", visibility="hidden", onclick="changeColor()")
-        div#answer= answer
+        input(id=`${index}`, type="radio", name=`${i.answers}`, value=0, checked="", visibility="hidden", onclick="changeColor()")
+        label(for=`${index}`)= answer
+
+        // div#answer= answer
       script.
         function changeColor() {
             document.getElementById('answer').style.backgroundColor="black";
