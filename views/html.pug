@@ -7,6 +7,11 @@
 //return perentage
 
 include header.pug
+script.
+  function changeColor(selectedAnswer) {
+      document.getElementById(selectedAnswer).style.backgroundColor="black";
+  }
+
 div.section#quiz
     div.html
         h2 How much do you know about HTML?
