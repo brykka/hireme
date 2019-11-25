@@ -15,7 +15,7 @@
 	font-weight: lighter;
 
 }
-/*
+
 label {
     display: block;
     position:relative;
@@ -27,7 +27,7 @@ label {
     box-shadow: 2px 2px #898989;
     transition: all 0.4s ease-in-out;
     text-align: center;
-}*/
+}
 
 label:hover {
   background-color: #888989;

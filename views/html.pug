@@ -10,6 +10,7 @@ include header.pug
 script.
   function changeColor(selectedAnswer) {
       document.getElementById(selectedAnswer).style.backgroundColor="black";
+      document.getElementById(selectedAnswer).checked = true;
   }
 
 div.section#quiz
