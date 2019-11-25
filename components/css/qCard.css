@@ -16,7 +16,7 @@
 
 }
 
-#answer {
+label {
     display: block;
     position:relative;
     margin: 0.67rem;
@@ -28,24 +28,34 @@
     transition: all 0.4s ease-in-out;
 }
 
-#answer:hover {
+label:hover {
   background-color: #888989;
   color: white;
   cursor: pointer;
   box-shadow: 2 2px #a3a3a3;
 }
 
-#answer:checked {
-  background-color: red;
+/* Hide default radio buttons
+input[type=radio] {
+  visibility: hidden;
+} */
+
+/* Unchecked answers 
+input[type=radio] + label {
+  background-color: blue;
   box-shadow: 0 20px #666;
   transform: translateY(4px);
   cursor: default;
-}
+}*/
 
+/* Checked answers
+input[type=radio]:checked + label {
+  /* background-color: red;
+  box-shadow: 0 20px #666;
+  transform: translateY(4px);
+  cursor: default;
+} */
 
-label #i {
-  visibility: hidden;
-}
 
 
 

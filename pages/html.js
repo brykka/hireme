@@ -56,7 +56,3 @@ function shuffle(array) {
 db.close();
 // Return the questionData dictionary for pug to parse through.
 module.exports = questionData;
-
-
-
-
