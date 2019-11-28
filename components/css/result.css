@@ -36,3 +36,11 @@ img {
 .result h2 {
 	/* position: absolute; */
 }
+
+.correct {
+  background-color: green;
+}
+
+.incorrect {
+  background-color: red;
+}

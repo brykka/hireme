@@ -1,20 +1,16 @@
 body
     include header.pug
     div.end
-        each answer, question in body
+        each answer, question in responseBody
           p= `Question: ${question}`
-          p= `Answer: ${answer}`
-          p= `Percentage Correct: ${percentageCorrect}`
-
-        h3 Here is your
-            | HTML/CSS/Js
-            | quiz result
+          div.yourAnswer
+            p(class=`${answer.class}`)= `Your Answer: ${answer.submitted}`
+          div.correctAnswer
+            p(class='correct')= `Correct Answer: ${answer.correct}`
+            p= `class: ${answer.class}`
         div.result
             div.card-image
                 //- img(src="https://images.unsplash.com/photo-1532884928231-ef40895eb654?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1633&q=80")
-            h2
-                |You get
-                span 50/100
-                |, awesome!
+            h2=`You get ${percentageCorrect}%, awesome!`
 
         include againButton.pug
