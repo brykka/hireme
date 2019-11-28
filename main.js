@@ -68,10 +68,8 @@ app.post('/quiz/html', jsonParser, function(req, res) {
         }
       }
     }
-    console.log(responseBody);
     var percentageCorrect = (rateOfCorrect / Object.keys(body).length) * 100;
     res.render('result', {
-      "body": body,
       "percentageCorrect": percentageCorrect,
       "responseBody": responseBody
     });
@@ -85,12 +83,69 @@ app.get('/quiz/css', function(req, res) {
         "cssData": css,
     });
 })
+
+app.post('/quiz/css', jsonParser, function(req, res) {
+    var body = req.body;
+    var databaseInfo = require('./pages/css.js');
+    var rateOfCorrect = 0;
+    var responseBody = {};
+
+    for (const [id, databaseEntry] of Object.entries(databaseInfo)) {
+      for (const [question, submittedAnswer] of Object.entries(body)) {
+        if (databaseEntry.question == question) {
+          responseBody[question] = {};
+          responseBody[question]['submitted'] = submittedAnswer;
+          responseBody[question]['correct'] = databaseEntry.correct;
+          if (databaseEntry.correct == submittedAnswer) {
+            rateOfCorrect++;
+            responseBody[question]['class'] = 'correct';
+          } else {
+            responseBody[question]['class'] = 'incorrect';
+          }
+        }
+      }
+    }
+    var percentageCorrect = (rateOfCorrect / Object.keys(body).length) * 100;
+    res.render('result', {
+      "percentageCorrect": percentageCorrect,
+      "responseBody": responseBody
+    });
+})
+
 // Javascript stuff here
 app.get('/quiz/JS', function(req, res) {
     var javascript = require('./pages/javascript.js');
 
     res.render('javascript', {
         "javascriptData": javascript,
+    });
+})
+
+app.post('/quiz/JS', jsonParser, function(req, res) {
+    var body = req.body;
+    var databaseInfo = require('./pages/javascript.js');
+    var rateOfCorrect = 0;
+    var responseBody = {};
+
+    for (const [id, databaseEntry] of Object.entries(databaseInfo)) {
+      for (const [question, submittedAnswer] of Object.entries(body)) {
+        if (databaseEntry.question == question) {
+          responseBody[question] = {};
+          responseBody[question]['submitted'] = submittedAnswer;
+          responseBody[question]['correct'] = databaseEntry.correct;
+          if (databaseEntry.correct == submittedAnswer) {
+            rateOfCorrect++;
+            responseBody[question]['class'] = 'correct';
+          } else {
+            responseBody[question]['class'] = 'incorrect';
+          }
+        }
+      }
+    }
+    var percentageCorrect = (rateOfCorrect / Object.keys(body).length) * 100;
+    res.render('result', {
+      "percentageCorrect": percentageCorrect,
+      "responseBody": responseBody
     });
 })
 
