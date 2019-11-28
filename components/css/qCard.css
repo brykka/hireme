@@ -66,4 +66,8 @@ input[type=radio]{
   cursor: default;
 }
 
+.hiddenStuff {
+  display: none;
+}
+
 
