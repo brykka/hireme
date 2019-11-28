@@ -1,15 +1,17 @@
-// function get_answers(question, answer)
-//create an empty hash
-//create counter from 0
-//compare argument answer to htmlData.correctAns
-// if it is, then ++ counter
+// onclick send question and answers (post) to results
+// compare argument answer to .correctAns
 // after comparing answers, find percentage
-//return perentage
+// return perentage
 
 include header.pug
 script.
   function changeColor(selectedAnswer) {
       document.getElementById(selectedAnswer).style.backgroundColor="black";
+      document.getElementById(selectedAnswer).checked = true;
+  }
+
+  function getAnswers(question, answer) {
+
   }
 
 div.section#quiz
