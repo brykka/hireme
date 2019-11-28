@@ -2,6 +2,8 @@ var express = require('express');
 var app = express();
 var sqlite3 = require('sqlite3').verbose();
 var favicon = require('express-favicon');
+const bodyParser = require('body-parser');
+var jsonParser = bodyParser.json();
 
 app.use(express.json());
 app.use(express.urlencoded())
@@ -35,14 +37,37 @@ eval(fs.readFileSync('./pages/index.js') + '');
 eval(fs.readFileSync('./pages/javascript.js') + '');
 
 
+
+
 // HTML stuff here
 app.get('/quiz/html', function(req, res) {
     var html = require('./pages/html.js');
-
     res.render('html', {
         "htmlData": html,
     });
 })
+
+app.post('/quiz/html', jsonParser, function(req, res) {
+    var body = req.body;
+    console.log(body);
+    var databaseInfo = require('./pages/html.js');
+    var rateOfCorrect = 0;
+    for (const [id, databaseEntry] of Object.entries(databaseInfo)) {
+      for (const [question, submittedAnswer] of Object.entries(body)) {
+        if (databaseEntry.question == question) {
+          if (databaseEntry.correct == submittedAnswer) {
+            rateOfCorrect++;
+          }
+        }
+      }
+    }
+    var percentageCorrect = (rateOfCorrect / Object.keys(body).length) * 100;
+    res.render('result', {
+      "body": body,
+      "percentageCorrect": percentageCorrect
+    });
+})
+
 // CSS stuff here
 app.get('/quiz/css', function(req, res) {
     var css = require('./pages/css.js');
@@ -68,18 +93,6 @@ app.set('views', process.cwd() + '/views')
 app.set('view engine', 'pug')
 app.use("/img", express.static(path.join(__dirname, 'img')));
 
-app.get('/result', function(req, res) {
-  res.render('result', {
-    // "body": body,
-  });
-})
-
-app.post('/result', function(req, res) {
-    var body = req.body;
-    res.render('result', {
-      // "body": body,
-    });
-})
 
 var server = app.listen(process.env.PORT || 8081, function() {
     var host = server.address().address

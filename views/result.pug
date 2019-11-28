@@ -1,7 +1,11 @@
 body
     include header.pug
     div.end
-      p #{body}
+        each answer, question in body
+          p= `Question: ${question}`
+          p= `Answer: ${answer}`
+          p= `Percentage Correct: ${percentageCorrect}`
+
         h3 Here is your
             | HTML/CSS/Js
             | quiz result
