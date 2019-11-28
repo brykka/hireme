@@ -49,22 +49,31 @@ app.get('/quiz/html', function(req, res) {
 
 app.post('/quiz/html', jsonParser, function(req, res) {
     var body = req.body;
-    console.log(body);
     var databaseInfo = require('./pages/html.js');
     var rateOfCorrect = 0;
+    var responseBody = {};
+
     for (const [id, databaseEntry] of Object.entries(databaseInfo)) {
       for (const [question, submittedAnswer] of Object.entries(body)) {
         if (databaseEntry.question == question) {
+          responseBody[question] = {};
+          responseBody[question]['submitted'] = submittedAnswer;
+          responseBody[question]['correct'] = databaseEntry.correct;
           if (databaseEntry.correct == submittedAnswer) {
             rateOfCorrect++;
+            responseBody[question]['class'] = 'correct';
+          } else {
+            responseBody[question]['class'] = 'incorrect';
           }
         }
       }
     }
+    console.log(responseBody);
     var percentageCorrect = (rateOfCorrect / Object.keys(body).length) * 100;
     res.render('result', {
       "body": body,
-      "percentageCorrect": percentageCorrect
+      "percentageCorrect": percentageCorrect,
+      "responseBody": responseBody
     });
 })
 
