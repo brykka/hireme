@@ -39,8 +39,11 @@ img {
 
 .correct {
   background-color: green;
+  opacity: .5;
 }
 
 .incorrect {
   background-color: red;
+  opacity: .5;
+
 }

@@ -24,7 +24,6 @@ label {
     background-color: #576172;
     color: #f9fdfe;
     border-radius: 3px;
-    box-shadow: 2px 2px #898989;
     transition: all 0.4s ease-in-out;
     text-align: center;
 }
@@ -36,18 +35,20 @@ label:hover {
   box-shadow: 2 2px #a3a3a3;
 }
 
-
 input[type=radio] + label {
-  background-color: blue;
-  box-shadow: 0 10px #666;
+  background-color: #576172;
   transform: translateY(4px);
   cursor: default;
 }
 
+input[type=radio]:hover + label {
+  background-color: #888989;
+  cursor: default;
+}
 
 input[type=radio]:checked + label {
-  background-color: red;
-  box-shadow: 0 10px #666;
+  background-color: white;
+  color: #576172;
   transform: translateY(4px);
   cursor: default;
 }
@@ -57,14 +58,6 @@ input[type=radio]{
   visibility: hidden;
 }
 
-
-
-#answer:disabled {
-  opacity: 0.5;
-  background-color: #9ACFCC;
-  color: #00403C;
-  cursor: default;
-}
 
 .hiddenStuff {
   display: none;
