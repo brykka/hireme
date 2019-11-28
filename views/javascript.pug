@@ -2,8 +2,9 @@ include header.pug
 div.section#quiz
     div.javascript
         h2 How much do you know about Javascript?
-    div.qCard   
-        ul
-            each i in javascriptData
-                include qCard.pug
-include submitButton.pug
+    form(action='/quiz/html', method='GET')
+      div.qCard
+          ul
+              each i in javascriptData
+                  include qCard.pug
+      include submitButton.pug

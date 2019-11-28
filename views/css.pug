@@ -1,9 +1,10 @@
 include header.pug
 div.section#quiz
     div.css
-        h2 About CSS?
-    div.qCard
-        ul
+        h2 How much do you know about CSS?
+    form(action='/quiz/css', method='GET')
+      div.qCard
+          ul
             each i in cssData
-                include qCard.pug
-include submitButton.pug
+              include qCard.pug
+      include submitButton.pug
