@@ -1,8 +1,6 @@
 div.aQuestion
 
-    h3= i.id
-        span :
-        span= i.question
+    h3(id=`${i.id}`)= `${i.id} : ${i.question}`
 
     each answer, index in i.answers
 

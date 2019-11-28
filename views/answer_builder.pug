@@ -1,0 +1,18 @@
+script.
+  var results = [];
+  var answers = document.getElementsByTagName('input');
+  var final = {};
+  function get_question(value) {
+    var ques = document.getElementById(value).innerHTML.split(" : ")[1];
+    return ques;
+  }
+  function get_answers(value, index, array) {
+    var theAnswer = value.labels[1].innerHTML;
+    var theQuestion = get_question(value.id.split("+")[0]);
+    final[theQuestion] = theAnswer;
+  }
+  for(var i = 0; i < answers.length; i++){
+    answers[i].checked ? results.push(answers[i]):"";
+  };
+  results.forEach(get_answers);
+  console.log(final);
