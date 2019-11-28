@@ -1,20 +1,19 @@
 include header.pug
-script.
-  function changeColor(selectedAnswer) {
-      document.getElementById(selectedAnswer).style.backgroundColor="black";
-      document.getElementById(selectedAnswer).checked = true;
-  }
+  script.
+    function changeColor(selectedAnswer) {
+        document.getElementById(selectedAnswer).style.backgroundColor="black";
+        document.getElementById(selectedAnswer).checked = true;
+    }
+    function getAnswers(question, answer) {
+    }
 
-  function getAnswers(question, answer) {
+  div.section#quiz
+      div.html
+          h2 How much do you know about HTML?
+      form(action='/quiz/html', method='GET')
+        div.qCard
+            ul
+              each i in htmlData
+                include qCard.pug
 
-  }
-
-div.section#quiz
-    div.html
-        h2 How much do you know about HTML?
-    form(action='/quiz/html', method='GET')
-      div.qCard
-          ul
-            each i in htmlData
-              include qCard.pug
-      include submitButton.pug
+include submitButton.pug
