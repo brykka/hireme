@@ -8,7 +8,9 @@ var db = new sqlite3.Database('./hireme.db', (err) => {
 });
 
 var questionData = {};
+
 db.all('SELECT * FROM html ORDER BY RANDOM() LIMIT 5;', function(err, questions) {
+
   var counter = 1;
   questions.forEach((question) => {
     var answers = [question.ans1, question.ans2, question.ans3,
@@ -54,5 +56,6 @@ function shuffle(array) {
 
 // Always close the db
 db.close();
+
 // Return the questionData dictionary for pug to parse through.
 module.exports = questionData;

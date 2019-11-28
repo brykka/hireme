@@ -32,16 +32,12 @@ function closeDB() {
 // js file is included here:
 var fs = require('fs');
 eval(fs.readFileSync('./pages/index.js') + '');
-// eval(fs.readFileSync('./pages/html.js') + '');
-// eval(fs.readFileSync('./pages/css.js') + '');
-eval(fs.readFileSync('./pages/javascript.js') + '');
-
-
 
 
 // HTML stuff here
+var html = require('./pages/html.js');
 app.get('/quiz/html', function(req, res) {
-    var html = require('./pages/html.js');
+  var html = require('./pages/html.js');
     res.render('html', {
         "htmlData": html,
     });
@@ -76,6 +72,7 @@ app.post('/quiz/html', jsonParser, function(req, res) {
 })
 
 // CSS stuff here
+var css = require('./pages/css.js');
 app.get('/quiz/css', function(req, res) {
     var css = require('./pages/css.js');
 
@@ -113,6 +110,7 @@ app.post('/quiz/css', jsonParser, function(req, res) {
 })
 
 // Javascript stuff here
+var javascript = require('./pages/javascript.js');
 app.get('/quiz/JS', function(req, res) {
     var javascript = require('./pages/javascript.js');
 
