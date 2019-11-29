@@ -3,8 +3,8 @@ div.section#quiz
     div.css
         h2 How much do you know about CSS?
     form(action='/quiz/css', method='GET')
-      div.qCard
-          ul
-            each i in cssData
-              include qCard.pug
-      include submitButton.pug
+        div.qCard
+            ul
+                each i in cssData
+                    include qCard.pug
+        include submitButton.pug

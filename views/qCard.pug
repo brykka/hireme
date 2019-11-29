@@ -1,11 +1,6 @@
 div.aQuestion
-
     h3(id=`${i.id}`)= `${i.id} : ${i.question}`
-
-    // div.hiddenStuff
-    //   input(type="radio", visibility="hidden", checked=true, name=`${i.question}`, value=`${i.correct}`)
     each answer, index in i.answers
-
-      div
-        input(id=`${i.id}+${index}`, type="radio", name=`${i.question}`, value=`${i.answers[index]}`, visibility="hidden", onclick=`changeColor('${i.id}+${index}')`)
-        label(for=`${i.id}+${index}`, id=`${i.id}+${index}`)= answer
+        div
+            input(id=`${i.id}+${index}`, type="radio", name=`${i.question}`, value=`${i.answers[index]}`, visibility="hidden", onclick=`changeColor('${i.id}+${index}')`)
+            label(for=`${i.id}+${index}`, id=`${i.id}+${index}`)= answer

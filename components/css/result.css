@@ -17,8 +17,8 @@
     border-top: 5px solid #fff;
     border-bottom: 5px solid #fff;
     box-shadow: 0px 2px 10px #888;
-	margin: 0 30px;
-	padding: 20px;
+    margin: 0 30px;
+    padding: 20px;
 }
 
 .resultPage {
@@ -42,7 +42,7 @@
     margin: 10px;
     width: 80%;
 }
-.corrections p{
-	font-size: 16px;
-	
+
+.corrections p {
+    font-size: 16px;
 }

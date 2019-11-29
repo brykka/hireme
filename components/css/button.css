@@ -1,28 +1,28 @@
-.buttonSec{
-	text-align: center;
+.buttonSec {
+    text-align: center;
     justify-content: center;
-	margin: 50px 0;
+    margin: 50px auto;
 }
 
 /* Basic styles */
-.buttonSec button{
-  background: none;
-  border: 0;
-  box-sizing: border-box;
-  padding: 20px 50px;
-
-  box-shadow: inset 0 0 0 2px #2589BD;
-  color: #2589BD;
-  /* font-size: inherit; */
-  font-size: 20px;
-  font-weight: 700;
-
-  position: relative;
-  vertical-align: middle;
+.buttonSec a,
+.buttonSec button {
+    background: none;
+    border: 0;
+    box-sizing: border-box;
+    padding: 20px 50px;
+    box-shadow: inset 0 0 0 2px #2589BD;
+    color: #2589BD;
+    font-size: 20px;
+    font-weight: 700;
+    position: relative;
+    vertical-align: middle;
 }
 
 .buttonSec button::before,
-.buttonSec button::after {
+.buttonSec button::after,
+.buttonSec a::before,
+.buttonSec a::after {
     box-sizing: inherit;
     content: '';
     position: absolute;
@@ -30,56 +30,61 @@
     height: 100%;
 }
 
-.buttonSec button.mainButton {
+button.mainButton,
+a.mainButton {
     transition: color 0.25s;
 }
 
-.buttonSec button.mainButton::before,
-.buttonSec button.mainButton::after {
+button.mainButton::before,
+button.mainButton::after,
+a.mainButton::before,
+a.mainButton::after {
     border: 2px solid transparent;
     width: 0;
     height: 0;
 }
 
-.buttonSec button.mainButton::before {
+a.mainButton::before,
+button.mainButton::before {
     top: 0;
     left: 0;
 }
 
-.buttonSec button.mainButton::after {
+a.mainButton::after,
+button.mainButton::after {
     bottom: 0;
     right: 0;
 }
 
-.buttonSec button.mainButton:hover {
+a.mainButton:hover,
+button.mainButton:hover {
     color: #FF9400;
 }
 
-  /* // Hover styles */
-.buttonSec button.mainButton:hover::before,
-.buttonSec button.mainButton:hover::after {
+/* // Hover styles */
+a.mainButton:hover::before,
+a.mainButton:hover::after,
+button.mainButton:hover::before,
+button.mainButton:hover::after {
     width: 100%;
     height: 100%;
 }
 
-.buttonSec button.mainButton:hover::before {
-	border-top-color: #FF9400;
-	/* Make borders visible */
-	border-right-color: #FF9400;
-	transition:
-		width 0.25s ease-out,
-		height 0.25s ease-out 0.25s;
+a.mainButton:hover::before,
+button.mainButton:hover::before {
+    border-top-color: #FF9400;
+    border-right-color: #FF9400;
+    transition:
+        width 0.25s ease-out,
+        height 0.25s ease-out 0.25s;
 }
 
-.buttonSec button.mainButton:hover::after {
+a.mainButton:hover::after,
+button.mainButton:hover::after {
     border-bottom-color: #FF9400;
-	/* Make borders visible */
     border-left-color: #FF9400;
     transition:
-      border-color 0s ease-out 0.5s,
-	  /* Wait for ::before to finish before showing border */
-      width 0.25s ease-out 0.5s,
-	  /* And then exanding width */
-      height 0.25s ease-out 0.75s;
-	  /* And finally height */
+        border-color 0s ease-out 0.5s,
+        width 0.25s ease-out 0.5s,
+        height 0.25s ease-out 0.75s;
 }
