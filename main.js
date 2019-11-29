@@ -9,6 +9,19 @@ app.use(express.json());
 app.use(express.urlencoded())
 app.use(favicon(__dirname + '/img/favicon.png'));
 
+function feedback(percentageCorrect) {
+  if (percentageCorrect === 100) {
+      return `you get ${percentageCorrect}%, you are incredible!`
+    } else if (percentageCorrect >= 80 && percentageCorrect <= 99) {
+      return `you get ${percentageCorrect}%, incredible!`
+    } else if  (percentageCorrect >= 70 && percentageCorrect <= 79){
+      return `you get ${percentageCorrect}%, oooh maybe study more!`
+    } else if (percentageCorrect >= 50 && percentageCorrect <= 69) {
+      return `you get ${percentageCorrect}%, oooh maybe study more!`
+    } else {
+      return `You get ${percentageCorrect}%, oh no`
+    }
+}
 
 var db = new sqlite3.Database('./hireme.db', (err) => {
     // open the db
@@ -71,9 +84,10 @@ app.post('/quiz/html', jsonParser, function(req, res) {
       var percentageCorrect = (rateOfCorrect / Object.keys(body).length) * 100;
     }
 
+      var feedbackMessage = feedback(percentageCorrect);
 
     res.render('result', {
-      "percentageCorrect": percentageCorrect,
+      "feedbackMessage": feedbackMessage,
       "responseBody": responseBody
     });
 })
@@ -116,8 +130,10 @@ app.post('/quiz/css', jsonParser, function(req, res) {
       var percentageCorrect = (rateOfCorrect / Object.keys(body).length) * 100;
     }
 
+    var feedbackMessage = feedback(percentageCorrect);
+
     res.render('result', {
-      "percentageCorrect": percentageCorrect,
+      "feedbackMessage": feedbackMessage,
       "responseBody": responseBody
     });
 })
@@ -160,8 +176,10 @@ app.post('/quiz/JS', jsonParser, function(req, res) {
       var percentageCorrect = (rateOfCorrect / Object.keys(body).length) * 100;
     }
 
+    var feedbackMessage = feedback(percentageCorrect);
+
     res.render('result', {
-      "percentageCorrect": percentageCorrect,
+      "feedbackMessage": feedbackMessage,
       "responseBody": responseBody
     });
 })

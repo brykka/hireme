@@ -2,8 +2,7 @@ div.resultPage
   include header.pug
 
   div.result
-    h2=`You get ${percentageCorrect}%, awesome!`
-    //include ../pages/feedback.js
+    h2= feedbackMessage
 
   div.end
       each answer, question in responseBody
