@@ -6,7 +6,7 @@
 .qCard .aQuestion {
 	margin: 20px 0;
 	padding: 10px 20px;
-	border: 2px dotted #fff;
+	border: 1px dotted rgba(255,255,255, 0.7);
 }
 
 .aquestion h3 {
@@ -19,13 +19,15 @@
 label {
     display: block;
     position:relative;
-    margin: 0.67rem;
+    margin: 3px;
     padding: 0.67rem;
     background-color: #576172;
     color: #f9fdfe;
     border-radius: 3px;
     transition: all 0.4s ease-in-out;
     text-align: center;
+    border: 1px solid #f9fdfe;
+
 }
 
 label:hover {
@@ -51,7 +53,15 @@ input[type=radio]:checked + label {
   color: #576172;
   transform: translateY(4px);
   cursor: default;
+  border: 1px solid #576172;
 }
+/*
+input[type=radio]:checked + label {
+  background-color: white;
+  color: #576172;
+  transform: translateY(4px);
+  cursor: default;
+} */
 
 
 input[type=radio]{
@@ -62,5 +72,3 @@ input[type=radio]{
 .hiddenStuff {
   display: none;
 }
-
-
