@@ -8,13 +8,13 @@ div.resultPage
 
   div.end
       each answer, question in responseBody
-        p= `Question: ${question}`
-        div.yourAnswer
-          p(class=`${answer.class}`)= `Your Answer: ${answer.submitted}`
-        div.correctAnswer
-          p(class='correct')= `Correct Answer: ${answer.correct}`
-          p= `class: ${answer.class}`
-
+        div.corrections
+          p= `Question: ${question}`
+          div.yourAnswer
+            p(class=`${answer.class}`)= `Your Answer: ${answer.submitted}`
+          div.correctAnswer
+            p(class='correct')= `Correct Answer: ${answer.correct}`
+            //p= `class: ${answer.class}`
 
 
   include againButton.pug

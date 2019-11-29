@@ -55,3 +55,10 @@ img {
   background-color: red;
   opacity: .5;
 }
+
+.corrections {
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+    width: 80%;
+}
