@@ -3,8 +3,8 @@ div.section#quiz
     div.javascript
         h2 How much do you know about Javascript?
     form(action='/quiz/js', method='GET')
-      div.qCard
-          ul
-              each i in javascriptData
-                  include qCard.pug
-      include submitButton.pug
+        div.qCard
+            ul
+                each i in javascriptData
+                    include qCard.pug
+        include submitButton.pug

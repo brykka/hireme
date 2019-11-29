@@ -1,24 +1,23 @@
-#quiz h2{
+#quiz h2 {
     font-size: 32px;
-	font-weight: bold;
+    font-weight: bold;
 }
 
 .qCard .aQuestion {
-	margin: 20px 0;
-	padding: 10px 20px;
-	border: 1px dotted rgba(255,255,255, 0.7);
+    margin: 20px 0;
+    padding: 10px 20px;
+    border: 1px dotted rgba(255, 255, 255, 0.7);
 }
 
 .aquestion h3 {
-	font-size: 20px;
-	margin: 0;
-	font-weight: lighter;
-
+    font-size: 20px;
+    margin: 0;
+    font-weight: lighter;
 }
 
 label {
     display: block;
-    position:relative;
+    position: relative;
     margin: 3px;
     padding: 0.67rem;
     background-color: #576172;
@@ -27,48 +26,38 @@ label {
     transition: all 0.4s ease-in-out;
     text-align: center;
     border: 1px solid #f9fdfe;
-
 }
 
 label:hover {
-  background-color: #888989;
-  color: white;
-  cursor: pointer;
-  box-shadow: 2 2px #a3a3a3;
+    background-color: #888989;
+    color: white;
+    cursor: pointer;
+    box-shadow: 2 2px #a3a3a3;
 }
 
-input[type=radio] + label {
-  background-color: #576172;
-  transform: translateY(4px);
-  cursor: default;
+input[type=radio]+label {
+    background-color: #576172;
+    transform: translateY(4px);
+    cursor: default;
 }
 
-input[type=radio]:hover + label {
-  background-color: #888989;
-  cursor: default;
+input[type=radio]:hover+label {
+    background-color: #888989;
+    cursor: default;
 }
 
-input[type=radio]:checked + label {
-  background-color: white;
-  color: #576172;
-  transform: translateY(4px);
-  cursor: default;
-  border: 1px solid #576172;
-}
-/*
-input[type=radio]:checked + label {
-  background-color: white;
-  color: #576172;
-  transform: translateY(4px);
-  cursor: default;
-} */
-
-
-input[type=radio]{
-  visibility: hidden;
+input[type=radio]:checked+label {
+    background-color: white;
+    color: #576172;
+    transform: translateY(4px);
+    cursor: default;
+    border: 1px solid #576172;
 }
 
+input[type=radio] {
+    visibility: hidden;
+}
 
 .hiddenStuff {
-  display: none;
+    display: none;
 }
