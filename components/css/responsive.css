@@ -34,16 +34,21 @@
     .profile p {
         height: 150px;
     }
+
     #quiz.section{
         width: 100%;
         padding: 10px 150px;
     }
     .qCard .aQuestion {
     	padding: 20px 50px;
+        max-width: 600px;
+        min-width: 400px;
+
     }
     .buttonSec{
     	margin: 50px 0 150px 0;
     }
+
 }
 
 /* Desktop Styles */
@@ -78,10 +83,13 @@
         padding-left: 20px;
     }
     .profile p {
-        height: 80px;
+        min-height: 80px;
     }
+    
     .qCard .aQuestion {
     	padding: 20px 100px;
+        min-width: 600px;
+
     }
     .buttonSec{
     	margin: 50px 0 150px 0;
