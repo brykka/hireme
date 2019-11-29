@@ -64,13 +64,13 @@ app.post('/quiz/html', jsonParser, function(req, res) {
         }
       }
     }
-    var percentageCorrect = (rateOfCorrect / Object.keys(body).length) * 100;
 
     if (rateOfCorrect === 0) {
       var percentageCorrect = 0;
     } else {
       var percentageCorrect = (rateOfCorrect / Object.keys(body).length) * 100;
     }
+
 
     res.render('result', {
       "percentageCorrect": percentageCorrect,
@@ -109,7 +109,6 @@ app.post('/quiz/css', jsonParser, function(req, res) {
         }
       }
     }
-    var percentageCorrect = (rateOfCorrect / Object.keys(body).length) * 100;
 
     if (rateOfCorrect === 0) {
       var percentageCorrect = 0;
@@ -154,7 +153,6 @@ app.post('/quiz/JS', jsonParser, function(req, res) {
         }
       }
     }
-    var percentageCorrect = (rateOfCorrect / Object.keys(body).length) * 100;
 
     if (rateOfCorrect === 0) {
       var percentageCorrect = 0;

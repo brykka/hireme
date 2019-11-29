@@ -1,13 +1,23 @@
 div.resultPage
-    include header.pug
-    div.result
-        h2=`You get ${percentageCorrect}%, awesome!`
-    div.end
-        each answer, question in responseBody
-            div.corrections
-                p= `Question: ${question}`
-                div.yourAnswer
-                    p(class=`${answer.class}`)= `Your Answer: ${answer.submitted}`
-                div.correctAnswer
-                    p(class='correct')= `Correct Answer: ${answer.correct}`
-    include againButton.pug
+  include header.pug
+
+  div.result
+    h2=`You get ${percentageCorrect}%, awesome!`
+    //include ../pages/feedback.js
+
+  div.end
+      each answer, question in responseBody
+        div.corrections
+          p= `Question: ${question}`
+          div.yourAnswer
+            p(class=`${answer.class}`)= `Your Answer: ${answer.submitted}`
+          div.correctAnswer
+            p(class='correct')= `Correct Answer: ${answer.correct}`
+            //p= `class: ${answer.class}`
+
+
+  include againButton.pug
+
+
+
+
