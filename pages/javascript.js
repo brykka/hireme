@@ -20,6 +20,7 @@ db.all('SELECT * FROM javascript ORDER BY RANDOM() LIMIT 5;', function(err, ques
         questionData[counter]['id'] = counter;
         questionData[counter]['question'] = question.question;
         questionData[counter]['answers'] = shuffle(answers);
+        questionData[counter]['correct'] = question.correctAns;
         counter++;
     });
 });
